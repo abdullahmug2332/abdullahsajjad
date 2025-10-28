@@ -1,26 +1,85 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@custom-variant dark (&:is(.dark *));
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  @apply w-[92%] lg:w-[80%] mx-auto
+}
+
+.heading {
+  @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
+}
+
+.para {
+  @apply text-[14px] md:text-[15px] lg:text-[16px];
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.subheading {
+  @apply text-[18px] md:text-[19px] lg:text-[21px];
+
+}
+
+.font {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.pad {
+  @apply py-[50px] lg:py-[80px]
+}
+
+.mar {
+  @apply my-[50px] lg:my-[80px]
+}
+
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+  --primary: #842929;
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #ffffff;
+  --primary: #ff6464;
+}
+@layer base {
+  body {
+    @apply bg-[var(--background)] text-[var(--foreground)];
+    font-family: 'Quicksand', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+  }
+}
+.bg {
+  @apply bg-[var(--primary)]
+}
+
+.color {
+  @apply text-[var(--primary)]
+}
+
+.hbg {
+  @apply hover:bg-[var(--primary)]
+}
+
+.hcolor {
+  @apply hover:text-[var(--primary)]
+}
+
+.bcolor {
+  @apply border-[var(--primary)]
 }
