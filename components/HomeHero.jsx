@@ -14,16 +14,16 @@ export default function HomeHero() {
         <div className='pad'>
             <div className="container flex flex-col lg:flex-row ">
                 <div className=' w-full lg:w-[37%]'>
-                    <div className='relative w-full xl:w-[80%] mx-auto'>
+                    <div className='relative w-[70%] md:w-full xl:w-[80%] mx-auto'>
                         <Image className='w-full rounded-b-full' src={"/abdullah.JPG"} height={700} width={300} alt='abdullah' />
                         <Link href={"/contact"} className=' absolute right-0 bottom-0'>
                             <CircularText
                                 text="LETS TALK * LETS TALK * LETS TALK * LETS TALK * "
                                 onHover="speedUp"
                                 spinDuration={20}
-                                className="custom-class"
+                                className="custom-class "
                             />
-                            <GoArrowUpRight className='absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-[25px]'/>
+                            <GoArrowUpRight className='absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-[25px]' />
                         </Link>
                     </div>
                 </div>
@@ -47,6 +47,24 @@ export default function HomeHero() {
                         <Link href={"/AbdullahSajjadResume.pdf"} className='btn'>Resume</Link>
                         <Link href={"/about"} className='btn'>Know me better</Link>
                     </div>
+                    {/* <div className='flex gap-[20px] mt-[30px] lg:mt-[40px]'>
+                        <Link href={"/"} className='flex items-center gap-[5px] lg:gap-[10px]'>
+                            <p className='subheading'>LinkedIn</p>
+                            <GoArrowUpRight className=' text-[25px]' />
+                        </Link>
+                        <Link href={"/"} className='flex items-center gap-[5px] lg:gap-[10px]'>
+                            <p className='subheading'>LinkedIn</p>
+                            <GoArrowUpRight className=' text-[25px]' />
+                        </Link>
+                        <Link href={"/"} className='flex items-center gap-[5px] lg:gap-[10px]'>
+                            <p className='subheading'>LinkedIn</p>
+                            <GoArrowUpRight className=' text-[25px]' />
+                        </Link>
+                        <Link href={"/"} className='flex items-center gap-[5px] lg:gap-[10px]'>
+                            <p className='subheading'>LinkedIn</p>
+                            <GoArrowUpRight className=' text-[25px]' />
+                        </Link>
+                    </div> */}
                 </motion.div>
             </div>
         </div>

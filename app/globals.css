@@ -21,12 +21,15 @@ body {
   --background: #ffffff;
   --foreground: #111111;
   --primary: #842929;
+  --marquee:#fcfbfb;
 }
 
 .dark {
   --background: #0f0f0f;
   --foreground: #ffffff;
   --primary: #cc4040;
+  --marquee:#dfdfdfb4;
+
 }
 .btn{
   color: var(--background) !important;
@@ -98,7 +101,9 @@ body {
   @apply my-[50px] lg:my-[80px]
 }
 
-
+.marquee-title{
+  color:var(--marquee)
+}
 
 
 @keyframes wave {

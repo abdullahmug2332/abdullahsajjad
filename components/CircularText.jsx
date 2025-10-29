@@ -79,7 +79,7 @@ const CircularText = ({ text, spinDuration = 20, onHover = 'speedUp', className 
 
   return (
     <motion.div
-      className={`m-0 mx-auto rounded-full w-[150px] lg:w-[170px] h-[150px] lg:h-[170px] bg-[var(--background)] relative  font-black text-center cursor-pointer origin-center ${className}`}
+      className={`m-0 mx-auto rounded-full w-[130px] md:w-[150px] lg:w-[170px] h-[130px] md:h-[150px] lg:h-[170px] bg-[var(--background)] relative  font-black text-center cursor-pointer origin-center  ${className}`}
       style={{ rotate: rotation }}
       initial={{ rotate: 0 }}
       animate={controls}
@@ -95,7 +95,7 @@ const CircularText = ({ text, spinDuration = 20, onHover = 'speedUp', className 
         return (
           <span
             key={i}
-            className=" absolute inline-block inset-0 text-xl transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+            className=" absolute inline-block inset-0 text-[15px] md:text-md transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
             style={{ transform, WebkitTransform: transform }}>
             
             {letter}
