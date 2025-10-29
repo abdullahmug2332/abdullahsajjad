@@ -140,13 +140,13 @@ const SplitText = ({
     switch (tag) {
       case 'h1':
         return (
-          <h1 ref={ref} style={style} className={classes}>
+          <h1 ref={ref} style={style} className={classes} >
             {text}
           </h1>
         );
       case 'h2':
         return (
-          <h2 ref={ref} style={style} className={classes}>
+          <h2 ref={ref} style={style} className={classes} >
             {text}
           </h2>
         );
