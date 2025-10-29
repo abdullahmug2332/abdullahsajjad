@@ -68,7 +68,7 @@ export function Navbar() {
                     <button
                         onClick={toggle}
                         aria-label="Toggle theme"
-                        className="duration-300 hover:-rotate-6 hover:scale-[1.08] cursor-pointer ml-auto md:ml-0 mr-[20px]"
+                        className="duration-300 hover:-rotate-6 hover:scale-[1.08] cursor-pointer ml-auto md:ml-0 mr-[20px] !focus-outline-0 !active:outline-0 !focus-ring-0 !active:ring-0 "
                     >
                         {/* while `theme` is null (before mount) show nothing to avoid mismatch */}
                         {theme === "dark" ? <FiSun /> : theme === "light" ? <FaRegMoon /> : null}

@@ -17,35 +17,6 @@ body {
   @apply w-[92%] lg:w-[80%] mx-auto
 }
 
-.heading {
-  @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
-}
-
-.para {
-  @apply text-[14px] md:text-[15px] lg:text-[16px];
-  font-family: 'Quicksand', sans-serif;
-
-}
-
-.subheading {
-  @apply text-[18px] md:text-[19px] lg:text-[21px];
-
-}
-
-.font {
-  font-family: 'Quicksand', sans-serif !important;
-}
-
-.pad {
-  @apply py-[50px] lg:py-[80px]
-}
-
-.mar {
-  @apply my-[50px] lg:my-[80px]
-}
-
-
-
 :root {
   --background: #ffffff;
   --foreground: #111111;
@@ -55,8 +26,17 @@ body {
 .dark {
   --background: #0f0f0f;
   --foreground: #ffffff;
-  --primary: #ff6464;
+  --primary: #cc4040;
 }
+.btn{
+  color: var(--background) !important;
+  background-color:var(--foreground)  !important;
+  @apply px-[20px] py-[10px] rounded-full font-[600] duration-300 cursor-pointer
+}
+.btn:hover {
+  background-color: var(--primary) !important;
+}
+
 @layer base {
   body {
     @apply bg-[var(--background)] text-[var(--foreground)];
@@ -64,6 +44,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
   }
 }
+
 .bg {
   @apply bg-[var(--primary)]
 }
@@ -82,4 +63,55 @@ body {
 
 .bcolor {
   @apply border-[var(--primary)]
+}
+
+.heading {
+  @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
+  font-family: 'Ubuntu', sans-serif !important;
+
+}
+
+.para {
+  @apply text-[14px] md:text-[15px] lg:text-[16px] ;
+  font-family: 'Quicksand', sans-serif;
+  color: var(--foreground) !important;
+
+}
+
+.subheading {
+  @apply text-[18px] md:text-[19px] lg:text-[21px];
+  font-family: 'Quicksand', sans-serif;
+
+}
+.lfont,h2 {
+  font-family: 'Ubuntu', sans-serif !important;
+}
+.sfont,h3{
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.pad {
+  @apply py-[50px] lg:py-[80px]
+}
+
+.mar {
+  @apply my-[50px] lg:my-[80px]
+}
+
+
+
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(0deg); }
+  45% { transform: rotate(-15deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave-hand {
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: wave 1.8s infinite ease-in-out;
 }
