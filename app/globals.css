@@ -19,9 +19,11 @@ body {
 
 :root {
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #222121;
   --primary: #842929;
   --marquee: #777777;
+  --accordion:#eeeeee;
+  --contact:#e0e0e0;
 }
 
 .dark {
@@ -29,6 +31,8 @@ body {
   --foreground: #ffffff;
   --primary: #cc4040;
   --marquee: #dfdfdfb4;
+  --accordion:#131313;
+  --contact:#1b1b1b;
 
 }
 
@@ -55,7 +59,7 @@ body {
 }
 
 .color {
-  @apply text-[var(--primary)]
+  @apply !text-[var(--primary)]
 }
 
 .hbg {

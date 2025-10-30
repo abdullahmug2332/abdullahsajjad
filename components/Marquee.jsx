@@ -21,7 +21,7 @@ export default function MarqueeSection() {
     ];
 
     return (
-        <section className="text-center pad ">
+        <section className="text-center ">
             <Marquee
                 speed={90}              // speed of scroll
                 gradient={false}        // disable fading edges

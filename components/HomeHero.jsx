@@ -33,7 +33,7 @@ export default function HomeHero() {
                     animate="visible"
                     variants={{
                         hidden: { clipPath: "inset(0 100% 0 0)" },
-                        visible: { clipPath: "inset(0 0% 0 0)" },
+                        visible: { clipPath: "inset(0 0% 0 0)" }, 
                     }}
                     transition={{ duration: 1.1, ease: "easeInOut" }}
                 >
