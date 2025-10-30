@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} antialiased mt-[65px] `}
+        className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} antialiased mt-[65px] w-[100vw] overflow-x-hidden `}
       >
         <Navbar/>
         {children}
