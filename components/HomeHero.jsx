@@ -21,6 +21,7 @@ export default function HomeHero({ data }) {
               height={700}
               width={300}
               alt={data.image.alt}
+              unoptimized
             />
             <Link href={data.image.cta.link} className="absolute right-0 bottom-0">
               <CircularText

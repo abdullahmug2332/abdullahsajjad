@@ -32,7 +32,7 @@ export default function Experience({experience}) {
                         experience.experiences.map((exp, index) => (
                             <div key={index} className="flex items-center justify-between bgacc px-[20px] py-[10px] rounded-[20px] duration-300 hover:translate-y-[-5px] cursor-pointer">
                                 <div className="flex items-center gap-[10px]">
-                                    <Image src={exp.image} alt="exp" width={200} height={200} className="w-[40px] h-[40px] rounded-full object-contain " />
+                                    <Image src={exp.image} alt="exp" width={200} height={200} className="w-[40px] h-[40px] rounded-full object-contain " unoptimized  />
                                     <div className="flex flex-col justify-center items-start">
                                         <p className="subheading font-[600]">{exp.name}</p>
                                         <p className="p font-[600] opacity-60">@{exp.role}</p>

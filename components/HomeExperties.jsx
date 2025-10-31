@@ -92,6 +92,7 @@ export default function HomeExperties({ data }) {
                 alt="expertise"
                 width={800}
                 height={800}
+                unoptimized
               />
             </motion.div>
           </div>

@@ -35,6 +35,7 @@ export default function HomeProjects({ data }) {
                             technologies={project.technologies}
                             year={project.year}
                             index={i}
+                            unoptimized
                         />
                     ))}
                 </div>

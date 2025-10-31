@@ -119,6 +119,7 @@ export default function Educations({ data }) {
                                                     className="w-full aspect-[3/2] object-cover rounded-[25px]"
                                                     width={800}
                                                     height={800}
+                                                    unoptimized
                                                 />
                                             </div>
                                         </CarouselItem>
