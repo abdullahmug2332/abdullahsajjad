@@ -7,6 +7,7 @@ import { CiMenuFries } from "react-icons/ci";
 import { usePathname } from "next/navigation";
 import {
     Sheet,
+    SheetClose,
     SheetContent,
     SheetDescription,
     SheetHeader,
@@ -84,13 +85,16 @@ export function Navbar() {
                                     <SheetDescription>
                                         <div className="items-center gap-8 flex flex-col mt-[100px]">
                                             {navLinks.map((link) => (
-                                                <Link
-                                                    key={link.path}
-                                                    href={link.path}
-                                                    className="text-sm font-[600] hover:scale-[1.05] text-white hover:-translate-y-1 duration-300 hcolor "
-                                                >
-                                                    {link.name}
-                                                </Link>
+                                                <SheetClose asChild>
+                                                    <Link
+                                                        key={link.path}
+                                                        href={link.path}
+                                                        className="text-sm font-[600] hover:scale-[1.05] text-white hover:-translate-y-1 duration-300 hcolor "
+                                                    >
+                                                        {link.name}
+
+                                                    </Link>
+                                                </SheetClose>
                                             ))}
                                         </div>
                                     </SheetDescription>

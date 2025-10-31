@@ -35,10 +35,10 @@ export default function Experience({experience}) {
                                     <Image src={exp.image} alt="exp" width={200} height={200} className="w-[40px] h-[40px] rounded-full object-contain " unoptimized  />
                                     <div className="flex flex-col justify-center items-start">
                                         <p className="subheading font-[600]">{exp.name}</p>
-                                        <p className="p font-[600] opacity-60">@{exp.role}</p>
+                                        <p className=" font-[600] opacity-60 text-[12px] md:text-[16px]">@{exp.role}</p>
                                     </div>
                                 </div>
-                                <p className="opacity-60 font-[500]">{exp.timePeriod.from} - {exp.timePeriod.to}</p>
+                                <p className="opacity-60 font-[500] text-[10px] md:text-[16px]">{exp.timePeriod.from} - {exp.timePeriod.to}</p>
                             </div>
                         ))
                     }

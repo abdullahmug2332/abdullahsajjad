@@ -11,7 +11,7 @@ export default function Certifications({ data }) {
 
     return (
         <section className="pad">
-            <div className="container flex flex-col gap-[20px]">
+            <div className="container flex flex-col  gap-[20px]">
                 {/* Heading */}
                 <div className="w-full lg:w-[80%]">
                     <div className="flex justify-start items-center gap-[10px] mb-[10px]">

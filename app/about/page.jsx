@@ -84,7 +84,7 @@ export default function page() {
         {
           "name": "IBSTEC",
           "image": "/ibstec.png",
-          "role": "Javascript developer",
+          "role": "JS developer",
           "timePeriod": {
             "from": "April 2025",
             "to": "Present"
@@ -152,8 +152,8 @@ export default function page() {
       ]
     },
     certifications: {
-      subTitle: "ACHIEVEMENTS & CERTIFICATIONS",
-      title: "Professional Certifications",
+      subTitle: "Certified Skills",
+      title: "Certifications",
       description:
         "My certifications reflect my commitment to continuous learning and professional growth — mastering the latest tools and technologies to build high-quality, modern web solutions.",
       certificates:
