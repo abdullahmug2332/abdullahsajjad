@@ -73,7 +73,9 @@ body {
 .bcolor {
   @apply border-[var(--primary)]
 }
-
+.bgacc{
+  background-color: var(--accordion);
+}
 .heading {
   @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
   font-family: 'Ubuntu', sans-serif !important;

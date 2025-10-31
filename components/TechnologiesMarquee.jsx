@@ -1,4 +1,3 @@
-"use client";
 import Marquee from "react-fast-marquee";
 import React from "react";
 import {
@@ -11,8 +10,7 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
-  FaKey, // JWT
-  FaCloudUploadAlt, // Multer
+  FaKey, 
 } from "react-icons/fa";
 
 import {

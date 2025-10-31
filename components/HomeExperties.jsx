@@ -10,34 +10,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import Image from "next/image";
-import { FaCode } from "react-icons/fa";
-import { HiOutlinePaintBrush } from "react-icons/hi2";
-import { FaWordpress } from "react-icons/fa";
 import Link from "next/link";
 
-export default function HomeExperties() {
-  const specialties = [
-    {
-      icons: <FaCode className="text-[25px] ml-[10px]" />,
-      title: "Full-Stack Development",
-      description:
-        "Building fast, secure, and scalable web applications using React, Next.js, Node.js, and the MERN stack — from front-end interfaces to back-end APIs.",
-    },
-    {
-      icons: <HiOutlinePaintBrush className="text-[25px] ml-[10px]" />,
-      title: "UI/UX Design",
-      description:
-        "Designing intuitive, visually appealing, and user-centered interfaces that deliver seamless digital experiences across all devices.",
-    },
-    {
-      icons: <FaWordpress className="text-[25px] ml-[10px]" />,
-      title: "WordPress Development",
-      description:
-        "Creating custom WordPress websites and landing pages with Elementor and Storefront — optimized for performance, SEO, and easy management.",
-    },
-  ];
 
-  // Animation variants for fade-up effect
+export default function HomeExperties({ data }) {
   const fadeUp = {
     hidden: { opacity: 0, y: 50 },
     visible: (i) => ({
@@ -53,22 +29,19 @@ export default function HomeExperties() {
         <div className="flex justify-start items-center gap-[10px] mb-[10px]">
           <GiStarShuriken className="subheading text-[var(--primary)]" />
           <SplitText
-            text="SPECIALITY"
+            text={data.subTitle}
             className="text-[var(--primary)] font-bold text-[20px]"
           />
         </div>
 
-        <SplitText text="Area of Expertise" className="font-bold heading" />
+        <SplitText text={data.title} className="font-bold heading" />
 
-        <p className="para mb-[30px]">
-          A glimpse into my key technical strengths and creative problem-solving
-          blending design precision with functional excellence.
-        </p>
+        <p className="para mb-[30px]">{data.description}</p>
 
         <div className="flex flex-wrap justify-between gap-[20px]">
           <div className="w-full lg:w-[49%]">
-            <Accordion type="single" collapsible className="space-y-2">
-              {specialties.map((item, index) => (
+            <Accordion type="single" collapsible className="space-y-2" defaultValue="item-0" >
+              {data.specialties.map((item, index) => (
                 <motion.div
                   key={index}
                   custom={index}
@@ -81,8 +54,8 @@ export default function HomeExperties() {
                     value={`item-${index}`}
                     className="px-3 py-2 rounded-[10px] bg-[var(--accordion)]"
                   >
-                    <AccordionTrigger className="subheading font-[600] justify-start items-center cursor-pointer">
-                      {item.icons}
+                    <AccordionTrigger className="subheading font-[600] justify-start items-center cursor-pointer gap-[10px]">
+                      <span className="color">{item.icon}</span>
                       {item.title}
                     </AccordionTrigger>
                     <AccordionContent className="para">
@@ -93,7 +66,6 @@ export default function HomeExperties() {
               ))}
             </Accordion>
 
-            {/* Animated button */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -101,8 +73,8 @@ export default function HomeExperties() {
               viewport={{ once: true }}
               className="mt-[40px] flex justify-end"
             >
-              <Link href={"/about"} className="btn font-[600] inline-block">
-                Know me better
+              <Link href={data.btnLink} className="btn font-[600] inline-block">
+                {data.btnText}
               </Link>
             </motion.div>
           </div>
@@ -115,7 +87,7 @@ export default function HomeExperties() {
               viewport={{ once: true }}
             >
               <Image
-                src={"/expertise.jpg"}
+                src={data.image}
                 className="w-full aspect-3/2 object-cover rounded-[25px]"
                 alt="expertise"
                 width={800}
