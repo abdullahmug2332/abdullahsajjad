@@ -34,6 +34,7 @@ export default function Hobby({ data }) {
                         className="w-full rounded-[30px]"
                         width={400}
                         height={400}
+                        unoptimized
                     />
                 </div>
 
