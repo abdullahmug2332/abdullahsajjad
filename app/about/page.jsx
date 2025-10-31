@@ -115,7 +115,7 @@ export default function page() {
       title: "EDUCATION",
       description:
         "My academic journey reflects consistent dedication to learning and technical growth. From excelling in foundational studies to pursuing a BSCS degree, I’ve built a strong base in computer science and web development that drives my professional work.",
-      images: ["/img4.png", "/img1.png"],
+      images: ["/img4.PNG", "/img1.PNG"],
       btnText: "View all Projects",
       btnLink: "/projects",
       educations: [
@@ -152,6 +152,7 @@ export default function page() {
       ]
     },
     certifications: {
+      image:"cert_photo.JPG",
       subTitle: "Certified Skills",
       title: "Certifications",
       description:

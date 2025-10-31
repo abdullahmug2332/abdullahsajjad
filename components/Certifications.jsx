@@ -31,7 +31,7 @@ export default function Certifications({ data }) {
                 <div className="flex flex-col lg:flex-row gap-[40px]">
                     <div className="w-full lg:w-[40%]">
                         <Image
-                            src={"/cert_photo.jpg"}
+                            src={data.image}
                             alt="certification"
                             className="w-full rounded-[30px]"
                             width={400}
