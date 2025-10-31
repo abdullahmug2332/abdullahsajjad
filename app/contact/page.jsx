@@ -7,7 +7,7 @@ export default function page() {
   const contact = {
     form: {
       subTitle: "Get In Touch",
-      title: "Let’s Bring Your Ideas to Life",
+      title: "Let’s Talk ",
       description:
         "Have a question, project idea, or collaboration in mind? Fill out the form below and I’ll get back to you shortly. I’m always excited to discuss new opportunities and creative solutions.",
       image: "/abdullah.JPG",
