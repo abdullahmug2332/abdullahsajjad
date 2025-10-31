@@ -35,7 +35,7 @@ export default function ContactForm({ data }) {
                     </div>
                     <div className='w-full lg:w-1/2   lg:px-[15px]  order-1 lg:order-2 '>
                         <button className='flex items-center gap-[10px]  px-[20px]  rounded-full font-[600] bgacc my-[10px]'><span className='color text-[35px]'>•</span><SplitText className='para font-[600]' text="Available for Work" /></button>
-                        <Image src={data.image} className='w-[100px] h-[100px] object-cover rounded-full mt-[20px] shadow-xl' alt='abdullah' width={400} height={400} />
+                        <Image src={data.image} className='w-[100px] h-[100px] object-cover rounded-full mt-[20px] shadow-xl' alt='abdullah' width={400} height={400} unoptimized />
                         <p className='para font-[500] mt-[20px]'>{data.message}</p>
                         <div className='flex items-center gap-[20px]  mt-[30px]'>
                             <a href={"https://www.linkedin.com/in/abdullah-sajjad-8881b9289/"} target='_blank'><FiLinkedin className='text-[29px] color duration-300 hover:translate-y-[-5px]' /></a>
