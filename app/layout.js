@@ -2,7 +2,6 @@ import { Geist, Geist_Mono, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Slogen from "@/components/Slogen";
 
 // Existing fonts
 const geistSans = Geist({
@@ -45,7 +44,6 @@ export default function RootLayout({ children }) {
       >
         <Navbar/>
         {children}
-        <Slogen/>
         <Footer/>
       </body>
     </html>

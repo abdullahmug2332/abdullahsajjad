@@ -13,6 +13,9 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.pcontainer {
+  @apply w-[95%] md:w-[80%] xl:w-[60%] mx-auto
+}
 .container {
   @apply w-[92%] lg:w-[80%] mx-auto
 }
@@ -79,6 +82,9 @@ body {
 .bgacc{
   background-color: var(--accordion);
 }
+.bgcon{
+  background-color: var(--contact);
+}
 .heading {
   @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
   font-family: 'Ubuntu', sans-serif !important;
@@ -111,7 +117,7 @@ h3 {
 }
 
 .pad {
-  @apply py-[50px] lg:py-[80px]
+  @apply py-[30px] lg:py-[50px]
 }
 
 .mar {

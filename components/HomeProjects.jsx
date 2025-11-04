@@ -30,10 +30,11 @@ export default function HomeProjects({ data }) {
                     {data.projects.map((project, i) => (
                         <ProjectsCard
                             key={i}
-                            image={project.image}
+                            cardImage={project.cardImage}
                             name={project.name}
-                            technologies={project.technologies}
+                            tech_stack={project.tech_stack}
                             year={project.year}
+                            slug={project.slug}
                             index={i}
                             unoptimized
                         />

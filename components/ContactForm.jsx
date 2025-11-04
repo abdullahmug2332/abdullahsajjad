@@ -30,15 +30,15 @@ export default function ContactForm({ data }) {
 
       const result = await res.json();
       if (result.success) {
-        setFeedback("✅ Message sent successfully!");
+        setFeedback("Message sent successfully!");
         setFullName("");
         setEmail("");
         setMessage("");
       } else {
-        setFeedback("❌ Failed to send message. Try again.");
+        setFeedback("Failed to send message. Try again.");
       }
     } catch (err) {
-      setFeedback("⚠️ Error sending message. Check your internet connection.");
+      setFeedback("⚠️Error sending message. Check your internet connection.");
     } finally {
       setLoading(false);
     }
@@ -57,7 +57,7 @@ export default function ContactForm({ data }) {
             />
           </div>
           <SplitText text={data.title} className="font-bold heading" />
-          <p className="para mb-[30px] lg:w-[80%]">{data.description}</p>
+          <p className="para mb-[30px] lg:w-[80%]  hidden lg:block">{data.description}</p>
         </div>
 
         {/* Form + Right Side */}
@@ -106,8 +106,8 @@ export default function ContactForm({ data }) {
 
           {/* Right Section */}
           <div className="w-full lg:w-1/2 lg:px-[15px] order-1 lg:order-2">
-            <button className="flex items-center gap-[10px] px-[20px] rounded-full font-[600] bgacc my-[10px]">
-              <span className="color text-[35px]">•</span>
+            <button className="flex items-center gap-[10px] px-[20px] rounded-full font-[600] bgacc my-[10px]  hidden lg:block ">
+              <span className="color text-[35px]">• </span>
               <SplitText
                 className="para font-[600]"
                 text="Available for Work"

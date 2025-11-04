@@ -14,8 +14,8 @@ export default function page() {
       message: "My inbox is always open for new ideas, collaborations, or freelance projects. Whether you’re looking to bring your vision to life, need help with web development, or just want to discuss creative possibilities — feel free to reach out anytime. I’d be more than happy to connect and explore how we can work together!"
     },
     faqs: {
-      title: "Frequently Asked Questions",
-      subtitle: "Get quick answers before reaching out",
+      subtitle: "FAQs",
+      title: "Get Quick Answers",
       description:
         "We’ve gathered some of the most common questions clients ask about my work process, project timelines, and communication. If you don’t see your question here, feel free to send me a message — I’ll be happy to help!",
       allFaqs: [

@@ -28,12 +28,12 @@ export default function Faqs ({ data }) {
                     <div className="flex justify-start items-center gap-[10px] mb-[10px]">
                         <GiStarShuriken className="subheading text-[var(--primary)]" />
                         <SplitText
-                            text={data.subTitle}
+                            text={data.subtitle}
                             className="text-[var(--primary)] font-bold text-[20px]"
                         />
                     </div>
 
-                    <SplitText text={data.title} className="font-bold heading" />
+                    <SplitText text={data.title} className="font-bold heading " />
 
                     <p className="para mb-[30px]">{data.description}</p>
                 </div>

@@ -6,6 +6,7 @@ import SplitText from "@/components/SplitText";
 import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Certifications({ data }) {
 
@@ -109,7 +110,7 @@ export default function Certifications({ data }) {
                                 ease: "easeOut",
                             }}
                         >
-                            <button className="btn">View Certificate</button>
+                            <Link href={"/certificate.jpg"} className="btn">View Certificate</Link>
                         </motion.div>
                     </motion.div>
                 </div>
