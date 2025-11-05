@@ -136,7 +136,7 @@ const SplitText = ({
       wordWrap: 'break-word',
       willChange: 'transform, opacity'
     };
-    const classes = `split-parent overflow-hidden inline-block whitespace-normal ${className}`;
+    const classes = `split-parent overflow-hidden inline-block whitespace-normal !text-start ${className}`;
     switch (tag) {
       case 'h1':
         return (

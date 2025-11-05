@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { allProjects } from "@/lib/Projects";
 import ProjectsCard from "@/components/ProjectsCard";
 import SplitText from "@/components/SplitText";
+import { GiStarShuriken } from "react-icons/gi";
 
 export default function Page() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -12,8 +13,8 @@ export default function Page() {
     activeFilter === "All"
       ? allProjects
       : allProjects.filter(
-          (project) => project.type.toLowerCase() === activeFilter.toLowerCase()
-        );
+        (project) => project.type.toLowerCase() === activeFilter.toLowerCase()
+      );
 
   return (
     <section className="pad">
@@ -21,6 +22,7 @@ export default function Page() {
         {/* Section Header */}
         <div className="w-full lg:w-[80%]">
           <div className="flex justify-start items-center gap-[10px] mb-[10px]">
+            <GiStarShuriken className="subheading text-[var(--primary)]" />
             <SplitText
               text="MY WORK"
               className="text-[var(--primary)] font-bold text-[20px]"
@@ -39,10 +41,9 @@ export default function Page() {
               key={filter}
               onClick={() => setActiveFilter(filter)}
               className={`px-[20px] py-[5px] rounded-full font-[600] duration-300 cursor-pointer
-                ${
-                  activeFilter === filter
-                    ? "color bg-[var(--accordion)]"
-                    : "hover:bg-[var(--accordion)]"
+                ${activeFilter === filter
+                  ? "color bg-[var(--accordion)]"
+                  : "hover:bg-[var(--accordion)]"
                 }`}
             >
               {filter}

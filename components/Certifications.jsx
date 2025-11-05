@@ -5,7 +5,7 @@ import { GiStarShuriken } from "react-icons/gi";
 import SplitText from "@/components/SplitText";
 import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 import Link from "next/link";
 
 export default function Certifications({ data }) {
@@ -23,7 +23,7 @@ export default function Certifications({ data }) {
                         />
                     </div>
                     <SplitText text={data.title} className="font-bold heading" />
-                    <p className="para mb-[30px]">
+                    <p className="para lg:mb-[30px]">
                         {data.description}
                     </p>
                 </div>

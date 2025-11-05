@@ -14,6 +14,7 @@ import { FaGraduationCap } from "react-icons/fa";
 import Certifications from '@/components/Certifications';
 import { GrCertificate } from "react-icons/gr";
 import Hobby from '@/components/Hobby';
+import Skills from '@/components/Skills';
 
 export const metadata = {
   title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer ",
@@ -75,6 +76,29 @@ export default function page() {
         { name: "Whatsapp", link: "https://wa.me/923254412292" },
         { name: "Gmail", link: "mailto:abdullahmug2332@gmail.com" },
       ],
+    },
+    skills: {
+      subTitle: "SKILLS & EXPERTIES",
+      title: "A blend of creativity, logic, and precision.",
+      description: "I’ve built a strong foundation in modern web development through hands-on projects and continuous learning. My skills span across frontend technologies, UI/UX implementation, and performance optimization — allowing me to craft fast, responsive, and visually appealing digital experiences. I’m always exploring new tools and frameworks to stay ahead in the ever-evolving tech landscape.",
+      "skills": [
+        {
+          "category": "Programming Languages",
+          "items": ["JavaScript (ES6+)", "TypeScript"],
+        },
+        {
+          "category": "Frameworks & Libraries",
+          "items": ["Next.js", "React.js", "Express.js", "Node.js"],
+        },
+        {
+          "category": "Database",
+          "items": ["MySQL"],
+        },
+        {
+          "category": "Developer Tools",
+          "items": ["Git", "GitHub", "Postman"],
+        }
+      ]
     },
     experience: {
       subTitle: "WORK HISTORY",
@@ -152,7 +176,7 @@ export default function page() {
       ]
     },
     certifications: {
-      image:"cert_photo.JPG",
+      image: "cert_photo.JPG",
       subTitle: "Certified Skills",
       title: "Certifications",
       description:
@@ -249,20 +273,21 @@ export default function page() {
       description:
         "Capturing moments through self-photography allows me to express creativity beyond coding and design. It's a way for me to explore visual storytelling, experiment with lighting, angles, and emotions, and document personal growth through my lens. I enjoy transforming simple moments into meaningful visual expressions that reflect both my artistic vision and individuality. Photography not only enhances my creativity but also inspires me to bring the same attention to detail and aesthetics into my web development work.",
     },
-  
 
-}
 
-return (
-  <>
-    <h1 className="hidden">Hire Professional Web Developer | Abdullah Sajjad | React Expert | Next.js | MERN</h1>
-    <AboutHero data={about.hero} />
-    <TechnologiesMarquee />
-    <Experience experience={about.experience} />
-    <Educations data={about.education} />
-    <Certifications data={about.certifications} />
-    <DesignProcess data={about.designProcess} />
-    <Hobby data={about.hobby} />
-  </>
-)
+  }
+
+  return (
+    <>
+      <h1 className="hidden">Hire Professional Web Developer | Abdullah Sajjad | React Expert | Next.js | MERN</h1>
+      <AboutHero data={about.hero} />
+      <TechnologiesMarquee />
+      <Skills data={about.skills} />
+      <Experience experience={about.experience} />
+      <Educations data={about.education} />
+      <Certifications data={about.certifications} />
+      <DesignProcess data={about.designProcess} />
+      <Hobby data={about.hobby} />
+    </>
+  )
 }
