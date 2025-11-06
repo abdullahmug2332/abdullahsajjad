@@ -13,6 +13,9 @@ import { SlScreenTablet } from "react-icons/sl";
 import { TbDeviceTabletOff } from "react-icons/tb";
 import { TbDeviceMobile } from "react-icons/tb";
 import { TbDeviceMobileOff } from "react-icons/tb";
+import { LuGithub } from "react-icons/lu";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -46,12 +49,16 @@ export default function ProjectPage() {
         className="w-full  mb-4 aspect-[10/4] object-cover mt-[5px] rounded-[10px]"
         unoptimized
       />
-      <div className="flex justify-between items-center flex-wrap ">
+      <div className="flex flex-col lg:flex-row  items-start lg:justify-between lg:items-center flex-wrap ">
         <p className="heading lfont font-[700]">{projectData.name}</p>
-        <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
+        <div className=" item-center gap-[5px] hidden lg:flex">
+          <a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>
+          <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
+        </div>
       </div>
-      <p className="para mb-6 mt-[10px]">{projectData.description}</p>
-      <p className="para mb-2 mt-[5px] flex gap-[15px]"><span>My Role: </span>  <span className="opacity-100">({projectData.role})</span></p>
+      <p className="para mb-1 mt-[10px]">{projectData.description}</p>
+      <strong className="para mb-2 mt-[5px] flex gap-[15px] "><span>My Role: </span>  <span className="opacity-100">({projectData.role})</span></strong>
+
       <div className="flex flex-wrap">
         {
           projectData.technologies.map((tech, i) => (
@@ -59,6 +66,10 @@ export default function ProjectPage() {
 
           ))
         }
+      </div>
+      <div className=" item-center gap-[5px] lg:hidden flex mt-[20px]">
+        <a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>
+        <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
       </div>
 
       <div className="pad">
@@ -70,12 +81,56 @@ export default function ProjectPage() {
         <Image
           src={projectData.landing_page_image}
           alt={`${projectData.name} landing`}
-          className="w-full mt-[10px]"
+          className="w-full mt-[10px] border"
           width={900}
           height={700}
           unoptimized
         />
       </div>
+      {
+        projectData.extraDetail && projectData.extraDetail.map((detail, index) => (
+          <div className="pad" key={index}>
+            {/* Title with SplitText animation */}
+            <SplitText
+              text={detail.title}
+              className="heading font-[700]"
+            />
+
+            {/* Carousel for all images inside each detail */}
+            <Carousel
+              className="w-full mt-[10px]"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 2500,
+                  stopOnInteraction: false,
+                  stopOnMouseEnter: true,
+                }),
+              ]}
+            >
+              <CarouselContent>
+                {detail.images.map((img, imgIndex) => (
+                  <CarouselItem key={imgIndex} className="basis-full">
+                    <Image
+                      src={img}
+                      alt={`${detail.title} - image ${imgIndex + 1}`}
+                      className="w-full border rounded-xl"
+                      width={900}
+                      height={700}
+                      unoptimized
+                    />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
+        ))
+      }
+
+
 
       <div className="pad">
         <SplitText
