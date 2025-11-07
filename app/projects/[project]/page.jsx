@@ -13,7 +13,6 @@ import { SlScreenTablet } from "react-icons/sl";
 import { TbDeviceTabletOff } from "react-icons/tb";
 import { TbDeviceMobile } from "react-icons/tb";
 import { TbDeviceMobileOff } from "react-icons/tb";
-import { LuGithub } from "react-icons/lu";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { GiStarShuriken } from "react-icons/gi";
@@ -53,7 +52,6 @@ export default function ProjectPage() {
       <div className="flex flex-col lg:flex-row  items-start lg:justify-between lg:items-center flex-wrap ">
         <p className="heading lfont font-[700]">{projectData.name}</p>
         <div className=" item-center gap-[5px] hidden lg:flex">
-          {projectData.github && (<a href={projectData.github} className="btn flex items-center gap-[7px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>)}
           <a href={projectData.live_preview_link} className="btn flex items-center gap-[5px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
         </div>
       </div>
@@ -72,7 +70,6 @@ export default function ProjectPage() {
         }
       </div>
       <div className=" item-center gap-[5px] lg:hidden flex mt-[20px]">
-        {projectData.github && (<a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>)}
         <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
       </div>
 

@@ -57,7 +57,7 @@ export function Navbar() {
                                     key={link.path}
                                     href={link.path}
                                     className={`text-sm font-[600] transition-all duration-300 hover:scale-[1.05] hover:-translate-y-1 
-              ${isActive ? "text-black dark:text-white hcolor" : "text-gray-400 dark:text-gray-200 hcolor"}`}
+              ${isActive ? "color " : "text-gray-400 dark:text-gray-200 hcolor"}`}
                                 >
                                     {link.name}
                                 </Link>

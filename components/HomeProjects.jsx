@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function HomeProjects({ data }) {
     return (
-        <section className="pad">
+        <section className="pad mb-[]">
             <div className="container">
                 <div className="flex justify-start items-center gap-[10px] mb-[10px]">
                     <GiStarShuriken className="subheading text-[var(--primary)]" />
@@ -26,7 +26,7 @@ export default function HomeProjects({ data }) {
                     {data.description}
                 </p>
 
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:gap-[40px] xl:gap-[60px] mt-[20px]  duration-300'>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:gap-[40px] xl:gap-[60px] mt-[20px]  duration-300 mb-[50px]'>
                     {data.projects.map((project, i) => (
                         <ProjectsCard
                             key={i}
@@ -41,7 +41,7 @@ export default function HomeProjects({ data }) {
                     ))}
                 </div>
 
-                <div className='flex justify-center mt-[50px] md:mt-[100px]'>
+                <div className='flex justify-center mt-[50px] md:mt-[100px] lg:mt-[150px]  xl:mt-[200px] '>
                     <Link href={data.btnLink} className='btn'>
                         {data.btnText}
                     </Link>
