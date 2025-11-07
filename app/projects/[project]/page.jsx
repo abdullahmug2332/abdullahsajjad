@@ -16,6 +16,7 @@ import { TbDeviceMobileOff } from "react-icons/tb";
 import { LuGithub } from "react-icons/lu";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { GiStarShuriken } from "react-icons/gi";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -34,30 +35,33 @@ export default function ProjectPage() {
   const iconclass = " text-[100px] w-full color"
   return (
     <div className=" pcontainer">
-      <div className="flex justify-between items-center py-[15px]">
+      <div className="flex justify-between hcolor items-center py-[15px]">
         <Link href="/projects" className="flex items-center gap-[5px] md:gap-[10px] cursor-pointer opacity-80 hover:opacity-100 duration-300 hover:translate-x-[-5px] ">
           <FaArrowLeft />
-          <p className="para">Back to Projects</p>
+          <p className="font-[600]">Back to Projects</p>
         </Link>
-        <p className="para opacity-80">{projectData.year}</p>
+        <p className="para font-[600] !text-[var(--primary)]">{projectData.year}</p>
       </div>
       <Image
         width={200}
         height={200}
         src={projectData.heroImage}
         alt={projectData.name}
-        className="w-full  mb-4 aspect-[10/4] object-cover mt-[5px] rounded-[10px]"
+        className={`w-full  mb-4 aspect-[10/4] object-cover mt-[5px] rounded-[10px] border `}
         unoptimized
       />
       <div className="flex flex-col lg:flex-row  items-start lg:justify-between lg:items-center flex-wrap ">
         <p className="heading lfont font-[700]">{projectData.name}</p>
         <div className=" item-center gap-[5px] hidden lg:flex">
-          <a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>
-          <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
+          {projectData.github && (<a href={projectData.github} className="btn flex items-center gap-[7px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>)}
+          <a href={projectData.live_preview_link} className="btn flex items-center gap-[5px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
         </div>
       </div>
       <p className="para mb-1 mt-[10px]">{projectData.description}</p>
-      <strong className="para mb-2 mt-[5px] flex gap-[15px] "><span>My Role: </span>  <span className="opacity-100">({projectData.role})</span></strong>
+      <strong className="para  mt-[15px] flex gap-[15px] opacity-80"><span>Type : </span>  <span className="capitalize">{projectData.type}</span></strong>
+      {projectData.theme && (<strong className="para   flex gap-[15px] opacity-80"><span>Theme : </span>  <span >{projectData.theme}</span></strong>)}
+      <strong className="para   flex gap-[15px] opacity-80"><span>Tech Stack : </span>  <span >{projectData.tech_stack}</span></strong>
+      <strong className="para mb-4 flex gap-[15px] opacity-80"><span>My Role : </span>  <span >{projectData.role}</span></strong>
 
       <div className="flex flex-wrap">
         {
@@ -68,15 +72,19 @@ export default function ProjectPage() {
         }
       </div>
       <div className=" item-center gap-[5px] lg:hidden flex mt-[20px]">
-        <a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>
+        {projectData.github && (<a href={projectData.github} className="btn flex items-center gap-[10px]" target="_blank">Git Hub<LuGithub className="font-[800]" /></a>)}
         <a href={projectData.live_preview_link} className="btn flex items-center gap-[10px]" target="_blank">Live Preview<GoArrowUpRight className="font-[800]" /></a>
       </div>
 
       <div className="pad">
-        <SplitText
-          text="Landing Page"
-          className="heading font-[700]"
-        />
+        <div className="flex  items-center gap-[10px] lg:gap-[15px]">
+          <GiStarShuriken className="subheading text-[var(--primary)]" />
+          <SplitText
+            text="Landing Page"
+            className="heading font-[700]"
+          />
+        </div>
+
         <p className="para mt-[10px]">Each project in my portfolio represents a step forward in blending creativity with functionality. From crafting pixel-perfect designs to building seamless user experiences, I focus on developing fast, responsive, and user-friendly web applications. Explore the collection below to see how I turn ideas into fully realized digital solutions.</p>
         <Image
           src={projectData.landing_page_image}
@@ -91,10 +99,14 @@ export default function ProjectPage() {
         projectData.extraDetail && projectData.extraDetail.map((detail, index) => (
           <div className="pad" key={index}>
             {/* Title with SplitText animation */}
-            <SplitText
-              text={detail.title}
-              className="heading font-[700]"
-            />
+            <div className="flex  items-center gap-[10px] lg:gap-[15px]">
+              <GiStarShuriken className="subheading text-[var(--primary)]" />
+              <SplitText
+                text={detail.title}
+                className="heading font-[700]"
+              />
+            </div>
+
 
             {/* Carousel for all images inside each detail */}
             <Carousel
@@ -133,10 +145,14 @@ export default function ProjectPage() {
 
 
       <div className="pad">
-        <SplitText
-          text="Color Pallete"
-          className="heading font-[700]"
-        />
+        <div className="flex  items-center gap-[10px] lg:gap-[15px]">
+          <GiStarShuriken className="subheading text-[var(--primary)]" />
+          <SplitText
+            text="Color Pallete"
+            className="heading font-[700]"
+          />
+        </div>
+
         <p className="para mt-[5px]">This project’s color palette is designed to create a cohesive visual experience. The chosen colors balance contrast and harmony, reinforcing brand identity while maintaining readability and aesthetic appeal.</p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[15px] mt-[10px]">
           {
@@ -151,10 +167,14 @@ export default function ProjectPage() {
       </div>
 
       <div className="pad">
-        <SplitText
-          text="Typography"
-          className="heading font-[700]"
-        />
+        <div className="flex  items-center gap-[10px] lg:gap-[15px]">
+          <GiStarShuriken className="subheading text-[var(--primary)]" />
+          <SplitText
+            text="Typography"
+            className="heading font-[700]"
+          />
+        </div>
+
         <p className="para mt-[5px]">The typography of this project is designed to create a clear visual hierarchy and enhance readability across all devices. A combination of elegant display fonts for headings and clean sans-serif fonts for body text ensures both style and legibility. Font sizes are carefully balanced to maintain consistency, accessibility, and a modern visual appeal throughout the user interface.</p>
         <div className="bgacc p-4 rouned-[10px] mt-[10px]">
           <div>
@@ -166,7 +186,7 @@ export default function ProjectPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] mt-[20px]">
             {
               projectData.typography.font_families.map((ff, i) => (
-                <div key={i} className="border-1 bgcon rounded-[15px] p-4">
+                <div key={i} className="border bgcon rounded-[15px] p-4">
                   <p className="subheading font-[600] color">{ff}</p>
                   <p className="opacity-70 text-[15px] ">Google Fonts</p>
                   <p className="opacity-70 text-[15px] mt-[10px]">Extra Bold</p>
@@ -181,10 +201,14 @@ export default function ProjectPage() {
       </div>
 
       <div className="pad">
-        <SplitText
-          text="Responsiveness"
-          className="heading font-[700]"
-        />
+        <div className="flex  items-center gap-[10px] lg:gap-[15px]">
+          <GiStarShuriken className="subheading text-[var(--primary)]" />
+          <SplitText
+            text="Responsiveness"
+            className="heading font-[700]"
+          />
+        </div>
+
         <p className="para mt-[5px]">Fully responsive design optimized for mobile, tablet, and laptop devices to ensure a smooth user experience across all platforms.</p>
         <div className="flex flex-wrap  mt-[20px] items-center gap-[10px] ">
           <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
@@ -206,15 +230,18 @@ export default function ProjectPage() {
 
 
 
+      {
+        projectData.other_details !== null && (
+          <div className="text-left w-full">
+            {/* Safely render your HTML list from JSON */}
+            <div
+              dangerouslySetInnerHTML={{ __html: projectData.other_details }}
+            ></div>
 
-      <div className="text-left w-full">
-        {/* Safely render your HTML list from JSON */}
-        <div
-          dangerouslySetInnerHTML={{ __html: projectData.other_details }}
-        ></div>
+          </div>
+        )
+      }
 
-
-      </div>
     </div>
 
   );

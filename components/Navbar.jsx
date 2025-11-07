@@ -39,7 +39,7 @@ export function Navbar() {
             <div className="container">
                 <nav
                     className={`${isScrolled ? "md:w-[70%] xl:w-[60%]" : "w-full"
-                        } mx-auto flex items-center md:justify-between px-6 py-3  border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 rounded-full`}
+                        } mx-auto flex items-center md:justify-between px-6 py-3  border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 rounded-full`}
                 >
                     <Link
                         href="/"

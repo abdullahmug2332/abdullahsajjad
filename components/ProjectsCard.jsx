@@ -7,10 +7,10 @@ export default function ProjectsCard({ cardImage, name, tech_stack, year,index ,
     const pathname = usePathname();
     const even = (index % 2) == 0
   return (
-    <Link href={`/projects/${slug}`} className={` hover:scale-[1.01] transition-transform duration-300 cursor-pointer relative ${even == true  ? "":"md:top-[70px] "} `} >
+    <Link href={`/projects/${slug}`} className={`  hover:scale-[1.01] transition-transform duration-300 cursor-pointer relative ${even == true  ? "":"md:top-[30%] "} `} >
       <Image
         src={cardImage}
-        className="w-full aspect-[3/2] object-cover rounded-[25px] lg:opacity-85 hover:opacity-100 duration-300 "
+        className="w-full aspect-[3/2] object-cover rounded-[25px] lg:opacity-85 hover:opacity-100 duration-300  "
         alt={name}
         width={400}
         height={300}
