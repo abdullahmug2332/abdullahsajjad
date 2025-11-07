@@ -16,36 +16,36 @@ import { GrCertificate } from "react-icons/gr";
 import Hobby from '@/components/Hobby';
 import Skills from '@/components/Skills';
 
-export const metadata = {
-  title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer ",
-  description:
-    "Discover Abdullah Sajjad, a web developer from Lahore, Pakistan, specializing in React, Next.js, and MERN stack to build modern, responsive websites.",
+// export const metadata = {
+//   title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer ",
+//   description:
+//     "Discover Abdullah Sajjad, a web developer from Lahore, Pakistan, specializing in React, Next.js, and MERN stack to build modern, responsive websites.",
 
-  keywords:
-    "About Abdullah Sajjad, Web Developer Profile, MERN Stack Developer, React Developer from Pakistan, Front-End Developer, Full-Stack Web Developer, Modern Web Developer, Next.js Expert, Software Engineer Portfolio, Lahore Web Developer",
+//   keywords:
+//     "About Abdullah Sajjad, Web Developer Profile, MERN Stack Developer, React Developer from Pakistan, Front-End Developer, Full-Stack Web Developer, Modern Web Developer, Next.js Expert, Software Engineer Portfolio, Lahore Web Developer",
 
-  openGraph: {
-    title: "About Abdullah Sajjad | Professional Web Developer & MERN Stack Expert",
-    description:
-      "Discover who I am, my skills, and my journey as a React and MERN stack web developer from Lahore, Pakistan. Building creative, fast, and modern web solutions for businesses worldwide.",
-    url: "https://abdullahsajjad.vercel.app/about",
-    siteName: "Abdullah Sajjad - Web Developer Portfolio",
-    images: [
-      {
-        url: "https://abdullahsajjad.vercel.app/abdullah.JPG",
-        width: 500,
-        height: 630,
-        alt: "Abdullah Sajjad - About Web Developer Profile",
-      },
-    ],
-    locale: "en_US",
-    type: "profile",
-  },
+//   openGraph: {
+//     title: "About Abdullah Sajjad | Professional Web Developer & MERN Stack Expert",
+//     description:
+//       "Discover who I am, my skills, and my journey as a React and MERN stack web developer from Lahore, Pakistan. Building creative, fast, and modern web solutions for businesses worldwide.",
+//     url: "https://abdullahsajjad.vercel.app/about",
+//     siteName: "Abdullah Sajjad - Web Developer Portfolio",
+//     images: [
+//       {
+//         url: "https://abdullahsajjad.vercel.app/abdullah.JPG",
+//         width: 500,
+//         height: 630,
+//         alt: "Abdullah Sajjad - About Web Developer Profile",
+//       },
+//     ],
+//     locale: "en_US",
+//     type: "profile",
+//   },
 
-  alternates: {
-    canonical: "https://abdullahsajjad.vercel.app/about",
-  },
-};
+//   alternates: {
+//     canonical: "https://abdullahsajjad.vercel.app/about",
+//   },
+// };
 
 
 export default function page() {

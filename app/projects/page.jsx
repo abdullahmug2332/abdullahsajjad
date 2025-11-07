@@ -5,6 +5,8 @@ import ProjectsCard from "@/components/ProjectsCard";
 import SplitText from "@/components/SplitText";
 import { GiStarShuriken } from "react-icons/gi";
 
+
+
 export default function Page() {
   const [activeFilter, setActiveFilter] = useState("All");
 

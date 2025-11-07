@@ -10,36 +10,36 @@ import { FaCode } from "react-icons/fa";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 import { FaWordpress } from "react-icons/fa";
 import { getFirstProjects } from "@/lib/Projects"; 
-export const metadata = {
-  title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer",
-  description:
-    "Get modern, responsive, and SEO-friendly websites by Abdullah Sajjad, expert in React, Next.js, and MERN stack web development for your business.",
+// export const metadata = {
+//   title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer",
+//   description:
+//     "Get modern, responsive, and SEO-friendly websites by Abdullah Sajjad, expert in React, Next.js, and MERN stack web development for your business.",
   
-  keywords:
-    "Hire Web Developer, React Developer, MERN Stack Developer, Freelance Web Developer, Front-End Developer, Next.js Developer, Custom Web Development, Modern Website Design, Business Website, Abdullah Sajjad Developer, Portfolio Web Developer, Web Development Services",
+//   keywords:
+//     "Hire Web Developer, React Developer, MERN Stack Developer, Freelance Web Developer, Front-End Developer, Next.js Developer, Custom Web Development, Modern Website Design, Business Website, Abdullah Sajjad Developer, Portfolio Web Developer, Web Development Services",
 
-  openGraph: {
-    title: "Hire Web Developer | Abdullah Sajjad | React & MERN Expert",
-    description:
-      "Looking to hire a professional web developer? I build modern, SEO-friendly websites using React, Next.js, and Node.js to help your business grow online.",
-    url: "https://abdullahsajjad.vercel.app",
-    siteName: "Abdullah Sajjad - Web Developer Portfolio",
-    images: [
-      {
-        url: "https://abdullahsajjad.vercel.app/abdullah.JPG",
-        width: 500,
-        height: 630,
-        alt: "Abdullah Sajjad - Professional Web Developer and React Expert",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
+//   openGraph: {
+//     title: "Hire Web Developer | Abdullah Sajjad | React & MERN Expert",
+//     description:
+//       "Looking to hire a professional web developer? I build modern, SEO-friendly websites using React, Next.js, and Node.js to help your business grow online.",
+//     url: "https://abdullahsajjad.vercel.app",
+//     siteName: "Abdullah Sajjad - Web Developer Portfolio",
+//     images: [
+//       {
+//         url: "https://abdullahsajjad.vercel.app/abdullah.JPG",
+//         width: 500,
+//         height: 630,
+//         alt: "Abdullah Sajjad - Professional Web Developer and React Expert",
+//       },
+//     ],
+//     locale: "en_US",
+//     type: "website",
+//   },
 
-  alternates: {
-    canonical: "https://abdullahsajjad.vercel.app",
-  },
-};
+//   alternates: {
+//     canonical: "https://abdullahsajjad.vercel.app",
+//   },
+// };
 
 
 

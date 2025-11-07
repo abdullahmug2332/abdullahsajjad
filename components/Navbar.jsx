@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 
 import useTheme from "@/hooks/useTheme"; // path where you saved it
+import Image from "next/image";
 
 export function Navbar() {
     const pathname = usePathname();
@@ -45,7 +46,7 @@ export function Navbar() {
                         href="/"
                         className="flex items-center gap-2 text-grey-800 font-semibold text-lg duration-300 hover:scale-[1.1] "
                     >
-                        AS
+                        <Image src={"/logo.png"} className="w-[35px] h-[35px]" unoptimized alt="logo" width={200} height={200}/>
                     </Link>
 
                     <div className="items-center gap-8 text-gray-500 hidden md:flex">
