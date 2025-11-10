@@ -64,7 +64,7 @@ export default function ProjectPage() {
       <div className="flex flex-wrap">
         {
           projectData.technologies.map((tech, i) => (
-            <span key={i} className="bgacc mr-2 px-[10px] py-[5px] rounded-[5px] color font-[600]">{tech}</span>
+            <span key={i} className="bgacc mr-2 mb-2 px-[10px] py-[5px] rounded-[5px] color font-[600]">{tech}</span>
 
           ))
         }

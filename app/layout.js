@@ -4,17 +4,19 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalPreloader from "@/components/GlobalPreloader";
 import favicon from "@/public/favicon.png"
+import ScrollToTop from "@/components/ScrollToTop";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 // ========================
 // ✅ Metadata Configuration
 // ========================
 export const metadata = {
-  title: "Hire Web Developer | Abdullah Sajjad | Javascript Developer",
+  title: "Abdullah Sajjad | Javascript Developer | Hire Web Developer",
   description:
     "Get modern, responsive, and SEO-friendly websites by Abdullah Sajjad, expert in React, Next.js, and MERN stack web development for your business.",
   keywords:
     "Hire Web Developer, React Developer, MERN Stack Developer, Freelance Web Developer, Front-End Developer, Next.js Developer, Custom Web Development, Modern Website Design, Business Website, Abdullah Sajjad Developer, Portfolio Web Developer, Web Development Services",
   openGraph: {
-    title: "Hire Web Developer | Abdullah Sajjad | React & MERN Expert",
+    title: "Abdullah Sajjad | Javascript Developer | Hire Web Developer",
     description:
       "Looking to hire a professional web developer? I build modern, SEO-friendly websites using React, Next.js, and Node.js to help your business grow online.",
     url: "https://abdullahsajjad.vercel.app",
@@ -83,6 +85,8 @@ export default function RootLayout({ children }) {
       >
         {/* Global Preloader */}
         <GlobalPreloader />
+        <ScrollToTopButton/>
+        <ScrollToTop />
 
         {/* Main Layout */}
         <Navbar />
