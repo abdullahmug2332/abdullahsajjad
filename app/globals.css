@@ -77,7 +77,7 @@ body {
 }
 
 .bcolor {
-  @apply border-[var(--primary)]
+  @apply !border-[var(--primary)]
 }
 .bgacc{
   background-color: var(--accordion);
@@ -85,13 +85,13 @@ body {
 .bgcon{
   background-color: var(--contact);
 }
+.border{
+  border-color: var(--border);
+}
+
 .heading {
   @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
   font-family: 'Ubuntu', sans-serif !important;
-
-}
-.border{
-  border-color: var(--border);
 }
 
 .para {

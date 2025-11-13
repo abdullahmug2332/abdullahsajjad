@@ -183,7 +183,7 @@ export default function ProjectPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] mt-[20px]">
             {
               projectData.typography.font_families.map((ff, i) => (
-                <div key={i} className="border bgcon rounded-[15px] p-4">
+                <div key={i} className="border bgcon rounded-[15px] p-4 border-2 bcolor">
                   <p className="subheading font-[600] color">{ff}</p>
                   <p className="opacity-70 text-[15px] ">Google Fonts</p>
                   <p className="opacity-70 text-[15px] mt-[10px]">Extra Bold</p>
@@ -208,16 +208,16 @@ export default function ProjectPage() {
 
         <p className="para mt-[5px]">Fully responsive design optimized for mobile, tablet, and laptop devices to ensure a smooth user experience across all platforms.</p>
         <div className="flex flex-wrap  mt-[20px] items-center gap-[10px] ">
-          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
+          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 border-2 bcolor">
             {projectData.responsiveness.laptop == true ? <RxLaptop className={iconclass} /> : <TbDeviceLaptopOff className={iconclass} />}
             <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.laptop == true ? "Laptop Responsive" : "Not Laptop Responsive"}</p>
           </div>
-          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
+          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 border-2 bcolor">
             {projectData.responsiveness.tablet == true ? <SlScreenTablet className={iconclass} /> : <TbDeviceTabletOff className={iconclass} />}
             <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.tablet == true ? "Tablet Responsive" : "Not Tablet Responsive"}</p>
 
           </div>
-          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8">
+          <div className="bgacc w-full md:w-[32%] rounded-[10px] py-8 border-2 bcolor">
             {projectData.responsiveness.mobile == true ? <TbDeviceMobile className={iconclass} /> : <TbDeviceMobileOff className={iconclass} />}
             <p className="text-center font-[600] color mt-[20px]">{projectData.responsiveness.mobile == true ? "Mobile Responsive" : "Not Mobile Responsive"}</p>
           </div>
