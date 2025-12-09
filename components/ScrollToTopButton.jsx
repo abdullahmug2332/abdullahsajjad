@@ -33,7 +33,7 @@ export default function ScrollToTopButton() {
           onClick={scrollToTop}
           aria-label="Scroll to top"
           className="fixed bottom-6 right-6 z-50 p-3 rounded-full shadow-xl 
-                       bg  hover:bg-[var(--foreground)] text-white cursor-pointer hover:translate-y-[-5px] duration-300" 
+                       bg  hover:bg-[var(--foreground)] text-white cursor-pointer hover:translate-y-[-5px] duration-300 " 
         >
           <MdOutlineKeyboardDoubleArrowUp className="w-5 h-5" />
         </motion.button>

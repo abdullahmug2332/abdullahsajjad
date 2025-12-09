@@ -33,7 +33,7 @@ export default function Home() {
         after: "& UI/UX designer",
       },
       description:
-        "I design and develop impactful, user-friendly websites using React, Next.js, and the MERN stack — combining creativity with clean code.",
+        "I design and develop impactful, user-friendly websites using React, Next.js, and the MERN stack combining creativity with clean code.",
       buttons: [
         { text: "Resume", link: "/AbdullahSajjadResume.pdf" },
         { text: "Know me better", link: "/about" },
@@ -59,7 +59,7 @@ export default function Home() {
     intro: {
       subTitle: "ABOUT ME",
       description:
-        "I’m Abdullah Sajjad, a 21-year-old passionate web developer and UI/UX designer from Lahore, Pakistan. With a solid background in frontend and full-stack development, I specialize in React, Next.js, Node.js, Express, and the MERN stack. I love turning ideas into visually appealing, user-friendly digital experiences that blend creativity with clean, efficient code. My passion drives me to continuously learn, explore new technologies, and craft modern web solutions that stand out.",
+        "I’m Abdullah Sajjad, a 21 years old passionate web developer and UI/UX designer from Lahore, Pakistan. With a solid background in frontend and full-stack development, I specialize in React, Next.js, Node.js, Express, and the MERN stack. I love turning ideas into visually appealing, user friendly digital experiences that blend creativity with clean, efficient code. My passion drives me to continuously learn, explore new technologies, and craft modern web solutions that stand out.",
     },
     projects: {
       subTitle: "MY WORK",
@@ -74,7 +74,7 @@ export default function Home() {
       subTitle: "SPECIALITY",
       title: "Area of Expertise",
       description:
-        "A glimpse into my key technical strengths and creative problem-solving blending design precision with functional excellence.",
+        "A glimpse into my key technical strengths and creative problem solving blending design precision with functional excellence.",
       image: "/expertise.jpg",
       btnText: "Know me better",
       btnLink: "/about",
@@ -83,7 +83,7 @@ export default function Home() {
           icon: <FaCode className="text-[25px] ml-[10px]" />,
           title: "Full-Stack Development",
           description:
-            "Building fast, secure, and scalable web applications using React, Next.js, Node.js, and the MERN stack — from front-end interfaces to back-end APIs.",
+            "Building fast, secure, and scalable web applications using React, Next.js, Node.js, and the MERN stack from front-end interfaces to back-end APIs.",
         },
         {
           icon: <HiOutlinePaintBrush className="text-[25px] ml-[10px]" />,
@@ -95,7 +95,7 @@ export default function Home() {
           icon: <FaWordpress className="text-[25px] ml-[10px]" />,
           title: "WordPress Development",
           description:
-            "Creating custom WordPress websites and landing pages with Elementor and Storefront — optimized for performance, SEO, and easy management.",
+            "Creating custom WordPress websites and landing pages with Elementor and Storefront  optimized for performance, SEO, and easy management.",
         },
       ],
     }

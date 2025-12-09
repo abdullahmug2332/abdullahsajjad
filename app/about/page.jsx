@@ -49,7 +49,7 @@ export default function page() {
     skills: {
       subTitle: "SKILLS & EXPERTIES",
       title: "A blend of creativity, logic, and precision.",
-      description: "I’ve built a strong foundation in modern web development through hands-on projects and continuous learning. My skills span across frontend technologies, UI/UX implementation, and performance optimization — allowing me to craft fast, responsive, and visually appealing digital experiences. I’m always exploring new tools and frameworks to stay ahead in the ever-evolving tech landscape.",
+      description: "I’ve built a strong foundation in modern web development through hands-on projects and continuous learning. My skills span across frontend technologies, UI/UX implementation, and performance optimization allowing me to craft fast, responsive, and visually appealing digital experiences. I’m always exploring new tools and frameworks to stay ahead in the ever-evolving tech landscape.",
       "skills": [
         {
           "category": "Programming Languages",
@@ -61,7 +61,7 @@ export default function page() {
         },
         {
           "category": "Database",
-          "items": ["MySQL"],
+          "items": ["MySQL","Mongodb"],
         },
         {
           "category": "Developer Tools",
@@ -72,7 +72,7 @@ export default function page() {
     experience: {
       subTitle: "WORK HISTORY",
       title: "EXPERIENCE",
-      description: "A look into my professional journey, where I’ve honed my technical expertise and creative problem-solving — delivering impactful web solutions that combine design precision, clean code, and real-world functionality.",
+      description: "A look into my professional journey, where I’ve honed my technical expertise and creative problem-solving delivering impactful web solutions that combine design precision, clean code, and real-world functionality.",
       experiences: [
         {
           "name": "IBSTEC",
@@ -149,7 +149,7 @@ export default function page() {
       subTitle: "Certified Skills",
       title: "Certifications",
       description:
-        "My certifications reflect my commitment to continuous learning and professional growth — mastering the latest tools and technologies to build high-quality, modern web solutions.",
+        "My certifications reflect my commitment to continuous learning and professional growth mastering the latest tools and technologies to build high-quality, modern web solutions.",
       certificates:
       {
         icon: <GrCertificate />,
@@ -195,7 +195,7 @@ export default function page() {
     designProcess: {
       subTitle: "STEPS I FOLLOW",
       title: "My Design Process",
-      description: "My design process blends creativity and logic — from strategy and wireframing to design, development, and testing. Each step focuses on building fast, user-centric, and scalable web experiences that drive real business results.",
+      description: "My design process blends creativity and logic from strategy and wireframing to design, development, and testing. Each step focuses on building fast, user-centric, and scalable web experiences that drive real business results.",
       process: [
         {
           step: "01. Research & Planning",

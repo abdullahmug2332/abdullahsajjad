@@ -29,7 +29,7 @@ SiShadcnui ,
   SiWoocommerce 
 } from "react-icons/si";
 import { BsFiletypeJson } from "react-icons/bs";
-
+import { BiLogoMongodb } from "react-icons/bi";
 export default function TechnologiesMarquee() {
   const technologies = [
     { name: "HTML5", icon: FaHtml5 },
@@ -44,6 +44,7 @@ export default function TechnologiesMarquee() {
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express.js", icon: SiExpress },
     { name: "MySQL", icon: SiMysql },
+    { name: "Mongodb", icon: BiLogoMongodb },
     { name: "Framer Motion", icon: SiFramer },
     { name: "WordPress", icon: FaWordpress },
     { name: "Elementor", icon: SiElementor },
