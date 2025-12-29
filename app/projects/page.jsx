@@ -54,7 +54,7 @@ export default function Page() {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:gap-[40px] xl:gap-[60px] mt-[20px] duration-300">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] lg:gap-[40px] xl:gap-[60px] mt-[20px] duration-300 md:mb-[40px]">
           {filteredProjects.length > 0 ? (
             filteredProjects.map((project, i) => (
               <ProjectsCard

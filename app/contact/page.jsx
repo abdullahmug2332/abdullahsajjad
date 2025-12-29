@@ -11,18 +11,18 @@ export default function page() {
       description:
         "Have a question, project idea, or collaboration in mind? Fill out the form below and I’ll get back to you shortly. I’m always excited to discuss new opportunities and creative solutions.",
       image: "/abdullah.JPG",
-      message: "My inbox is always open for new ideas, collaborations, or freelance projects. Whether you’re looking to bring your vision to life, need help with web development, or just want to discuss creative possibilities — feel free to reach out anytime. I’d be more than happy to connect and explore how we can work together!"
+      message: "My inbox is always open for new ideas, collaborations, or freelance projects. Whether you’re looking to bring your vision to life, need help with web development, or just want to discuss creative possibilities feel free to reach out anytime. I’d be more than happy to connect and explore how we can work together!"
     },
     faqs: {
       subtitle: "FAQs",
       title: "Get Quick Answers",
       description:
-        "We’ve gathered some of the most common questions clients ask about my work process, project timelines, and communication. If you don’t see your question here, feel free to send me a message — I’ll be happy to help!",
+        "We’ve gathered some of the most common questions clients ask about my work process, project timelines, and communication. If you don’t see your question here, feel free to send me a message I’ll be happy to help!",
       allFaqs: [
         {
           question: "01. What kind of projects do you work on?",
-          answer:
-            "I specialize in building modern, responsive websites and web applications using React, Next.js, Node.js, and WordPress. Whether it’s a personal portfolio, eCommerce store, or full-stack business solution — I can help bring your idea to life."
+         answer:
+            "I specialize in building modern, responsive websites and web applications using React, Next.js, Node.js, and WordPress. Whether it’s a personal portfolio, eCommerce store, or full-stack business solution. I can help bring your idea to life."
         },
         {
           question: "02. How long does it take to complete a project?",
@@ -42,7 +42,7 @@ export default function page() {
         {
           question: "05. How can I contact you for a project or collaboration?",
           answer:
-            "You can use the contact form on this website or email me directly. I usually respond within 24 hours — so feel free to reach out anytime!"
+            "You can use the contact form on this website or email me directly. I usually respond within 24 hours so feel free to reach out anytime!"
         }
       ]
     }
