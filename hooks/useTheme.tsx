@@ -8,7 +8,7 @@ const STORAGE_KEY = "theme-preference";
 export default function useTheme() {
   const [theme, setTheme] = useState<Theme | null>(null); // null until we know
 
-  // apply theme to documentElement
+  // apply theme to documentElement 
   const applyTheme = useCallback((t: Theme) => {
     const html = document.documentElement;
     if (t === "dark") html.classList.add("dark");
