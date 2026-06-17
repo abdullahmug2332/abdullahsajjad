@@ -39,14 +39,13 @@ export function Navbar() {
         <div className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-2 transition-all duration-500">
             <div className="container">
                 <nav
-                    className={`${isScrolled ? "md:w-[70%] xl:w-[60%]" : "w-full"
-                        } mx-auto flex items-center md:justify-between px-6 py-3  border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-500 rounded-full`}
-                >
+                    className={`${isScrolled ? "md:w-[70%] xl:w-[60%] bg-white/70 dark:bg-white/5 border" : "w-full bg-white/5"
+                        } mx-auto flex items-center md:justify-between px-6 py-3  border-white/10 bg-white/5 backdrop-blur-md transition-all duration-500 rounded-full `}>
                     <Link
                         href="/"
                         className="flex items-center gap-2 text-grey-800 font-semibold text-lg duration-300 hover:scale-[1.1]"
                     >
-                        <Image src={"/logo.png"} className="w-[35px] h-[35px]" unoptimized alt="logo" width={200} height={200}/>
+                        <Image src={"/logo.png"} className="w-[30px] h-[30px] ml-2" unoptimized alt="logo" width={200} height={200}/>
                     </Link>
 
                     <div className="items-center gap-8 text-gray-500 hidden md:flex">
@@ -58,7 +57,7 @@ export function Navbar() {
                                     key={link.path}
                                     href={link.path}
                                     className={`text-sm font-[600] transition-all duration-300 hover:scale-[1.05] hover:-translate-y-1 
-              ${isActive ? "color " : "text-gray-400 dark:text-gray-200 hcolor"}`}
+                                    ${isActive ? "color " : "text-gray-400 dark:text-gray-200 hcolor"}`}
                                 >
                                     {link.name}
                                 </Link>

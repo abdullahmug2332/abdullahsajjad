@@ -3,9 +3,10 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import GlobalPreloader from "@/components/GlobalPreloader";
-import favicon from "@/public/favicon.png"
+import favicon from "@/public/favicon.png";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
+import SmoothScroll from "@/components/SmoothScroll";
 // ========================
 // ✅ Metadata Configuration
 // ========================
@@ -68,10 +69,14 @@ export default function RootLayout({ children }) {
       <head>
         {/* Preconnect to Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
 
         {/* Favicon (Backup) */}
-        <link rel="icon" href={favicon}  type="image/png" sizes="any" />
+        <link rel="icon" href={favicon} type="image/png" sizes="any" />
 
         {/* Quicksand + Ubuntu fonts */}
         <link
@@ -85,9 +90,9 @@ export default function RootLayout({ children }) {
       >
         {/* Global Preloader */}
         <GlobalPreloader />
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
         <ScrollToTop />
-
+        <SmoothScroll />
         {/* Main Layout */}
         <Navbar />
         {children}
