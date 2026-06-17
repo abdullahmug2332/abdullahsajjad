@@ -2,7 +2,6 @@
 @import "tw-animate-css";
 @tailwind utilities;
 
-
 @custom-variant dark (&:is(.dark *));
 
 html {
@@ -10,42 +9,44 @@ html {
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .pcontainer {
-  @apply w-[95%] md:w-[80%] xl:w-[60%] mx-auto
+  @apply w-[95%] md:w-[80%] xl:w-[60%] mx-auto;
 }
 .container {
-  @apply w-[92%] lg:w-[80%] mx-auto
+  @apply w-[92%] lg:w-[80%] mx-auto;
 }
 
 :root {
   --background: #ffffff;
   --foreground: #222121;
-  --primary: #842929;
+  --primary: #a83535;
+  /* --primary: #842929; */
+  /* --primary: #cc4040; */
   --marquee: #777777;
-  --accordion:#eeeeee;
-  --contact:#e0e0e0;
-  --border:#dbdbdb;
-
+  --accordion: #eeeeee;
+  --contact: #e0e0e0;
+  --border: #dbdbdb;
 }
 
 .dark {
   --background: #0f0f0f;
   --foreground: #ffffff;
-  --primary: #cc4040;
+  /* --primary: #cc4040; */
+  /* --primary: #842929; */
+  --primary: #a83535;
   --marquee: #dfdfdfb4;
-  --accordion:#131313;
-  --contact:#1b1b1b;
-  --border:#2e2e2e;
-
+  --accordion: #131313;
+  --contact: #1b1b1b;
+  --border: #2e2e2e;
 }
 
 .btn {
   color: var(--background) !important;
   background-color: var(--foreground) !important;
-  @apply px-[20px] py-[10px] rounded-full font-[600] duration-300 cursor-pointer
+  @apply px-[20px] py-[10px] rounded-full font-[600] duration-300 cursor-pointer;
 }
 
 .btn:hover {
@@ -55,79 +56,79 @@ body {
 @layer base {
   body {
     @apply bg-[var(--background)] text-[var(--foreground)];
-    font-family: 'Quicksand', sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    font-family: "Quicksand", sans-serif;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
   }
 }
 
 .bg {
-  @apply bg-[var(--primary)]
+  @apply bg-[var(--primary)];
 }
 
 .color {
-  @apply !text-[var(--primary)]
+  @apply !text-[var(--primary)];
 }
 
 .hbg {
-  @apply hover:bg-[var(--primary)]
+  @apply hover:bg-[var(--primary)];
 }
 
 .hcolor {
-  @apply hover:text-[var(--primary)]
+  @apply hover:text-[var(--primary)];
 }
 
 .bcolor {
-  @apply !border-[var(--primary)]
+  @apply !border-[var(--primary)];
 }
-.bgacc{
+.bgacc {
   background-color: var(--accordion);
 }
-.bgcon{
+.bgcon {
   background-color: var(--contact);
 }
-.border{
+.border {
   border-color: var(--border);
 }
 
 .heading {
   @apply text-[30px] lg:text-[35px] 2xl:text-[40px];
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
 .para {
   @apply text-[14px] md:text-[15px] lg:text-[16px];
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--foreground) !important;
-
 }
 
 .subheading {
   @apply text-[18px] md:text-[19px] lg:text-[21px];
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .lfont,
 h2 {
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: "Ubuntu", sans-serif !important;
 }
 
 .sfont,
 h3 {
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: "Quicksand", sans-serif !important;
 }
 
 .pad {
-  @apply py-[30px] lg:py-[50px]
+  @apply py-[30px] lg:py-[50px];
 }
 
 .mar {
-  @apply my-[50px] lg:my-[80px]
+  @apply my-[50px] lg:my-[80px];
 }
 
 .marquee-title {
-  color: var(--marquee)
+  color: var(--marquee);
 }
-
 
 @keyframes wave {
   0% {
@@ -159,4 +160,32 @@ h3 {
   display: inline-block;
   transform-origin: bottom center;
   animation: wave 1.8s infinite ease-in-out;
+}
+/* width of scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* track (background) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* thumb (scroll handle) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+}
+
+/* hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary);
+}
+/* Apply globally */
+* {
+  cursor: url("/cursor.png"), auto !important;
+}
+
+/* Ensure body also enforced */
+body {
+  cursor: url("/cursor.png"), auto !important;
 }
