@@ -4,6 +4,7 @@ import React from "react";
 import { GiStarShuriken } from "react-icons/gi";
 import SplitText from "@/components/SplitText";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Experience({ experience }) {
@@ -19,8 +20,10 @@ export default function Experience({ experience }) {
                                 <div className="flex items-center gap-[10px]">
                                     <Image src={exp.image} alt="exp" width={200} height={200} className="w-[40px] h-[40px] rounded-full object-contain " unoptimized />
                                     <div className="flex flex-col justify-center items-start">
-                                        <p className="subheading font-[600]">{exp.name}</p>
-                                        <p className=" font-[600] opacity-60 text-[12px] md:text-[16px]">@{exp.role}</p>
+                                        <p className="subheading font-[600]">{exp.role}</p>
+                                        <Link href={exp.companyLink} target="_blank" rel="noopener noreferrer">
+                                            <p className=" font-[600] opacity-60 text-[12px] md:text-[16px] underline">@{exp.name}</p>
+                                        </Link>
                                     </div>
                                 </div>
                                 <p className="opacity-60 font-[500] text-[10px] md:text-[16px]">{exp.timePeriod.from} - {exp.timePeriod.to}</p>

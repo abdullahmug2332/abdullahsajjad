@@ -77,16 +77,28 @@ export default function page() {
         {
           "name": "IBSTEC",
           "image": "/ibstec.png",
-          "role": "JS developer",
+          "role": "Junior Full-stack Developer",
+          "companyLink": "https://www.ibstec.com/",
+          "timePeriod": {
+            "from": "July 2025",
+            "to": "Present"
+          }
+        },
+        {
+          "name": "IBSTEC",
+          "image": "/ibstec.png",
+          "role": "Website Developer Intern",
+          "companyLink": "https://www.ibstec.com/",
           "timePeriod": {
             "from": "April 2025",
-            "to": "Present"
+            "to": "July 2025"
           }
         },
         {
           "name": "Knowledge Stream",
           "image": "/ks.png",
-          "role": "Trainee",
+          "role": "Website Developer Trainee",
+          "companyLink": "https://knowledge.tech/",
           "timePeriod": {
             "from": "Jan 2024",
             "to": "April 2024"
@@ -95,7 +107,8 @@ export default function page() {
         {
           "name": "Nexskill",
           "image": "/nexskill.png",
-          "role": "Trainee",
+          "role": "Website Developer Trainee",
+          "companyLink": "https://www.nexskill.com/",
           "timePeriod": {
             "from": "Oct 2023",
             "to": "Dec 2023"
@@ -248,7 +261,7 @@ export default function page() {
 
   return (
     <>
-      <h1 className="hidden">Hire Professional Web Developer | Abdullah Sajjad | React Expert | Next.js | MERN</h1>
+      
       <AboutHero data={about.hero} />
       <TechnologiesMarquee />
       <Skills data={about.skills} />
