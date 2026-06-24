@@ -176,22 +176,21 @@ export default function page() {
           // 🌐 Frontend
           "HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript",
           "React.js", "Next.js", "Tailwind CSS", "Bootstrap",
-          "Redux Toolkit", "Context API", "Framer Motion", "React Router",
+          "Redux Toolkit", "Framer Motion", "React Router",
 
           // ⚙️ Backend
           "Node.js", "Express.js", "RESTful APIs", "Middleware",
           "JWT", "Bcrypt.js", "Multer",
-          "API Integration", "Postman", "Thunder Client",
+          "API Integration", "Postman",
 
           // 🗄️ Databases
           "MongoDB", "Mongoose", "MySQL", "SQL Queries", "Database Design",
 
           // 🧰 Tools & DevOps
-          "Git", "GitHub", "VS Code", "NPM", "dotenv", "Prettier",
-          "Vercel ",
+          "Git", "GitHub", "NPM", "dotenv","Vercel ",
 
           // 🎨 Design & UX
-          "Responsive Web Design", "UI/UX Optimization", "Figma (Basic)",
+          "Responsive Web Design", "UI/UX Optimization",
 
           // 💡 Soft Skills & Practices
           "Problem Solving", "Debugging", "Team Collaboration",
@@ -201,7 +200,7 @@ export default function page() {
           "API Testing", "Error Handling", "Authentication",
 
         ]
-        , // optional: add your certificate link or leave blank
+        , 
       },
 
     },
