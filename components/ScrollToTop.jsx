@@ -1,25 +1,25 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { getLenis } from "@/lib/lenisSingleton";
 
 export default function ScrollToTop() {
   const pathname = usePathname();
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    // Reset the scroll immediately before showing new page
-    window.scrollTo({ top: 0, behavior: "instant" });
-    setReady(false);
+    const lenis = getLenis();
 
-    // Small delay to ensure scroll happens before animations render
-    const timer = setTimeout(() => {
-      setReady(true);
-    }, 10); // adjust delay if needed (30–100ms works best)
+    // If Lenis exists, use it (so it won't be overridden immediately).
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+      return;
+    }
 
-    return () => clearTimeout(timer);
+    // Fallback
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [pathname]);
 
-  if (!ready) return null; // Prevent pre-rendering before scroll reset
   return null;
 }
+
