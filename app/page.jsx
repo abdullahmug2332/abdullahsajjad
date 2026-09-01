@@ -35,7 +35,7 @@ export default function Home() {
       description:
         "I design and develop impactful, user-friendly websites using React, Next.js, and the MERN stack combining creativity with clean code.",
       buttons: [
-        { text: "Resume", link: "/AbdullahSajjadResume.pdf" },
+        { text: "Resume", link: "/Abdullah-Sajjad-Resume.pdf" },
         { text: "Know me better", link: "/about" },
       ],
     },
