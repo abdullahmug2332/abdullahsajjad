@@ -29,7 +29,7 @@ export default function page() {
       description:
         "I design and develop modern, responsive, and high-performing websites using React, Next.js, and the MERN stack. My focus is on delivering clean, efficient code combined with visually appealing design to create seamless digital experiences that engage users and bring ideas to life.",
       buttons: [
-        { text: "Resume", link: "/AbdullahSajjadResume.pdf" },
+        { text: "Resume", link: "/Abdullah-Sajjad-Resume.pdf" },
         { text: "View all Projects", link: "/projects" },
       ],
       socials: [

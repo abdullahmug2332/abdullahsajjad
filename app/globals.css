@@ -23,24 +23,25 @@ body {
   --background: #f7f8fa;
   --foreground: #222121;
   --primary: #a83535;
-  /* --primary: #842929; */
-  /* --primary: #cc4040; */
   --marquee: #777777;
   --accordion: #eeeeee;
   --contact: #e0e0e0;
   --border: #dbdbdb;
-}
-
+    --mouse-x: 50vw;
+  --mouse-y: 50vh;
+  --bg-dot:rgba(163, 163, 163, 0.144); 
+  --bg-dot-hover:rgba(94, 93, 93, 0.602); 
+} 
 .dark {
   --background: #0f0f0f;
   --foreground: #ffffff;
-  /* --primary: #cc4040; */
-  /* --primary: #842929; */
   --primary: #a83535;
   --marquee: #dfdfdfb4;
   --accordion: #131313;
   --contact: #1b1b1b;
   --border: #2e2e2e;
+  --bg-dot:#ffffff09;
+  --bg-dot-hover:#646464;
 }
 
 .btn {
@@ -189,3 +190,73 @@ h3 {
 body {
   cursor: url("/cursor.png"), auto !important;
 }
+
+
+
+
+
+.dot-background {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+
+  background-image: radial-gradient(
+    circle,
+    var(--bg-dot) 1px,
+    transparent 1px
+  );
+
+  background-size: 15px 15px ; 
+
+  animation: dots-move 28s linear infinite;
+}
+
+.dot-background-hover {
+  z-index: -9;
+
+  background-image: radial-gradient(
+    circle,
+    var(--bg-dot-hover) 1px,
+    transparent 1px
+  );
+
+  background-size: 15px 15px ; 
+
+  /* Only show dots around cursor */
+  mask-image: radial-gradient(
+    circle 180px at var(--mouse-x) var(--mouse-y),
+    black 0%,
+    transparent 100%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle 180px at var(--mouse-x) var(--mouse-y),
+    black 0%,
+    transparent 100%
+  );
+
+  animation: dots-move 28s linear infinite;
+}
+
+@keyframes dots-move {
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 30px 20px;
+  }
+
+  50% {
+    background-position: 0 45px;
+  }
+
+  75% {
+    background-position: -30px 20px;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+} 

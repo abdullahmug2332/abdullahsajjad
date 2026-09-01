@@ -7,6 +7,7 @@ import favicon from "@/public/favicon.png";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import SmoothScroll from "@/components/SmoothScroll";
+import InteractiveDotBackground from "@/components/InteractiveDotBackground";
 // ========================
 // ✅ Metadata Configuration
 // ========================
@@ -94,6 +95,7 @@ export default function RootLayout({ children }) {
         <ScrollToTop />
         <SmoothScroll />
         {/* Main Layout */}
+         <InteractiveDotBackground />
         <Navbar />
         {children}
         <Footer />
