@@ -19,7 +19,8 @@ export default function Home() {
   const home = {
     hero: {
       image: {
-        src: "/abdullah2.jpg",
+        src: "/abdullah.JPG",
+        // src: "/abdullah2.jpg",
         alt: "abdullah",
         cta: {
           text: "LETS TALK * LETS TALK * LETS TALK * LETS TALK * ",
