@@ -29,9 +29,9 @@ export default function Home() {
       },
       greeting: "Hey! It's me Abdullah.",
       heroText: {
-        before: "A",
-        highlight: "creative developer",
-        after: "& UI/UX designer",
+        before: "A creative",
+        highlight: "Full Stack",
+        after: "Developer",
       },
       description:
         "I design and develop impactful, user-friendly websites using React, Next.js, and the MERN stack combining creativity with clean code.",
@@ -60,7 +60,7 @@ export default function Home() {
     intro: {
       subTitle: "ABOUT ME",
       description:
-        "I’m Abdullah Sajjad, a 21 years old passionate web developer and UI/UX designer from Lahore, Pakistan. With a solid background in frontend and full-stack development, I specialize in React, Next.js, Node.js, Express, and the MERN stack. I love turning ideas into visually appealing, user friendly digital experiences that blend creativity with clean, efficient code. My passion drives me to continuously learn, explore new technologies, and craft modern web solutions that stand out.",
+        "I’m Abdullah Sajjad, a 22 years old passionate Full Stack web developer. With a solid background in frontend and full-stack development, I specialize in React, Next.js, Node.js, Express, and the MERN stack. I love turning ideas into visually appealing, user friendly digital experiences that blend creativity with clean, efficient code. My passion drives me to continuously learn, explore new technologies, and craft modern web solutions that stand out.",
     },
     projects: {
       subTitle: "MY WORK",
