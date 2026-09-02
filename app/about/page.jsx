@@ -77,7 +77,7 @@ export default function page() {
         {
           "name": "IBSTEC",
           "image": "/ibstec.png",
-          "role": "Junior Full-stack Developer",
+          "role": "Full-stack Developer",
           "companyLink": "https://www.ibstec.com/",
           "timePeriod": {
             "from": "July 2025",
