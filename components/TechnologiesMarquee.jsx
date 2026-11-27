@@ -10,7 +10,9 @@ import {
   FaGitAlt,
   FaGithub,
   FaFigma,
-  FaKey, 
+  FaKey,
+  FaShopify,
+  FaPython, 
 } from "react-icons/fa";
 
 import {
@@ -29,13 +31,17 @@ SiShadcnui ,
   SiWoocommerce 
 } from "react-icons/si";
 import { BsFiletypeJson } from "react-icons/bs";
-import { BiLogoMongodb } from "react-icons/bi";
+import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
+import { RiSupabaseFill } from "react-icons/ri";
+import { AiOutlineOpenAI } from "react-icons/ai";
 export default function TechnologiesMarquee() {
   const technologies = [
     { name: "HTML5", icon: FaHtml5 },
     { name: "CSS3", icon: FaCss3Alt },
     { name: "JavaScript", icon: SiJavascript },
     { name: "TypeScript", icon: SiTypescript },
+    { name: "Python", icon: FaPython },
+    { name: "OpenAI SDK", icon: AiOutlineOpenAI },
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "Bootstrap", icon: FaBootstrap },
     { name: "React.js", icon: FaReact },
@@ -44,16 +50,18 @@ export default function TechnologiesMarquee() {
     { name: "Node.js", icon: FaNodeJs },
     { name: "Express.js", icon: SiExpress },
     { name: "MySQL", icon: SiMysql },
+    { name: "PostgreSQL", icon: BiLogoPostgresql },
     { name: "Mongodb", icon: BiLogoMongodb },
+    { name: "Supabase", icon: RiSupabaseFill },
     { name: "Framer Motion", icon: SiFramer },
     { name: "WordPress", icon: FaWordpress },
+    { name: "Shopfy", icon: FaShopify },
     { name: "Elementor", icon: SiElementor },
     { name: "WooCommerce", icon: SiWoocommerce },
     { name: "Git", icon: FaGitAlt },
     { name: "GitHub", icon: FaGithub },
     { name: "Figma", icon: FaFigma },
     { name: "JSON", icon: BsFiletypeJson },
-    { name: "Python", icon: SiPython },
     { name: "JWT", icon: FaKey },
     { name: "Vercel", icon: SiVercel },
     { name: "Shadcn UI", icon: SiShadcnui },

@@ -95,8 +95,8 @@ export default function RootLayout({ children }) {
         <ScrollToTop />
         <SmoothScroll />
         {/* Main Layout */}
-         <InteractiveDotBackground />
-        <Navbar />
+        <InteractiveDotBackground />
+        <Navbar /> 
         {children}
         <Footer />
       </body>

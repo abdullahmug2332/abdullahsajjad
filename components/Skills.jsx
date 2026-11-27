@@ -53,7 +53,7 @@ export default function Skills({ data }) {
                             >
                                 <AccordionItem
                                     value={`item-${index}`}
-                                    className="px-3 py-2 rounded-[10px] bg-[var(--accordion)]"
+                                    className="px-5 py-2 rounded-[10px] bg-[var(--accordion)]"
                                 >
                                     <AccordionTrigger className="subheading font-[600] justify-start items-center cursor-pointer gap-[10px]">
                                         {skill.category}

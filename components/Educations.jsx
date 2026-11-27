@@ -56,7 +56,7 @@ export default function Educations({ data }) {
                                 >
                                     <AccordionItem
                                         value={`item-${index}`}
-                                        className="px-3 py-2 rounded-[10px] bg-[var(--accordion)]"
+                                        className="px-5 py-2 rounded-[10px] bg-[var(--accordion)]"
                                     >
                                         <AccordionTrigger className="subheading font-[600] justify-start items-center cursor-pointer gap-[10px]">
                                             <span className="color text-[25px]">{edu.icon}</span>{edu.degree}

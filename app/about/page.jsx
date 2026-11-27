@@ -53,7 +53,7 @@ export default function page() {
       "skills": [
         {
           "category": "Programming Languages",
-          "items": ["JavaScript (ES6+)", "TypeScript"],
+          "items": ["JavaScript (ES6+)", "TypeScript","Python","C++"],
         },
         {
           "category": "Frameworks & Libraries",
@@ -61,11 +61,15 @@ export default function page() {
         },
         {
           "category": "Database",
-          "items": ["MySQL","Mongodb"],
+          "items": ["MySQL","PostgreSQL","Mongodb","Supabase"],
+        },
+        {
+          "category": "E-Commerce & CMS",
+          "items": ["Shopify","Liquid","Wordpress","Woocommerce"],
         },
         {
           "category": "Developer Tools",
-          "items": ["Git", "GitHub", "Postman"],
+          "items": ["Git", "GitHub","OpenAI SDK", "Postman"],
         }
       ]
     },
@@ -157,53 +161,50 @@ export default function page() {
         }
       ]
     },
-    certifications: {
-      image: "cert_photo.JPG",
-      subTitle: "Certified Skills",
-      title: "Certifications",
-      description:
-        "My certifications reflect my commitment to continuous learning and professional growth mastering the latest tools and technologies to build high-quality, modern web solutions.",
-      certificates:
-      {
-        icon: <GrCertificate />,
-        name: "MERN Stack Development Bootcamp",
-        description: "I completed my MERN Stack Development course at NexSkill, a leading institute focused on practical, industry-based training. During the program, I gained hands-on experience with HTML, CSS, JavaScript, React, Node.js, Express.js, and MySQL, building real-world projects that strengthened my skills in both frontend and backend development. The course helped me understand responsive design, database management, and follow best coding practices, preparing me to develop modern, efficient full-stack web applications.",
-        organization: "NeXskill",
-        location: "Lahore, Pakistan",
-        duration: "Sep 2023 – Dec 2023",
-        type: "Part-time (On-site)",
-        keySkills: [
-          // 🌐 Frontend
-          "HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript",
-          "React.js", "Next.js", "Tailwind CSS", "Bootstrap",
-          "Redux Toolkit", "Framer Motion", "React Router",
-
-          // ⚙️ Backend
-          "Node.js", "Express.js", "RESTful APIs", "Middleware",
-          "JWT", "Bcrypt.js", "Multer",
-          "API Integration", "Postman",
-
-          // 🗄️ Databases
-          "MongoDB", "Mongoose", "MySQL", "SQL Queries", "Database Design",
-
-          // 🧰 Tools & DevOps
-          "Git", "GitHub", "NPM", "dotenv","Vercel ",
-
-          // 🎨 Design & UX
-          "Responsive Web Design", "UI/UX Optimization",
-
-          // 💡 Soft Skills & Practices
-          "Problem Solving", "Debugging", "Team Collaboration",
-          "Project Planning",
-
-          // 🧠 Extra
-          "API Testing", "Error Handling", "Authentication",
-
-        ]
-        , 
-      },
-
+    certifications2:{
+  "subTitle": "Certifications",
+  "title": "Learning That Keeps Me Sharp",
+  "description": "Courses and certifications I've completed to strengthen my skills in AI, full-stack development, and problem solving.",
+  "image": "cert_photo.JPG",
+  "certificates": [
+    {
+      "name": "AI Fluency: Framework & Foundations",
+      "type": "",
+      "organization": "Anthropic",
+      "organizationLink": "https://www.anthropic.com",
+      "credentialLink": "",
+      "image": "/anthropic.png",
+      "timePeriod": { "from": "Oct 2026", "to": "" }
     },
+    {
+      "name": "Claude Code in Action",
+      "type": "",
+      "organization": "Anthropic",
+      "organizationLink": "https://www.anthropic.com",
+      "credentialLink": "",
+      "image": "/anthropic.png",
+      "timePeriod": { "from": "Oct 2026", "to": "" }
+    },
+    {
+      "name": "Python Programming, Algorithms & Problem Solving",
+      "type": "",
+      "organization": "Knowledge Stream",
+      "organizationLink": "",
+      "credentialLink": "",
+      "image": "/ks.png",
+      "timePeriod": { "from": "Jan 2024", "to": "Apr 2024" }
+    },
+      {
+      "name": "Bootcamp MERN Stack Development",
+      "type": "",
+      "organization": "Nexskill",
+      "organizationLink": "",
+      "credentialLink": "",
+      "image": "/nexskill.png",
+      "timePeriod": { "from": "Oct 2023", "to": "Dec 2023" }
+    }
+  ]
+},
     designProcess: {
       subTitle: "STEPS I FOLLOW",
       title: "My Design Process",
@@ -250,9 +251,9 @@ export default function page() {
     hobby: {
       image: "/hobby.jpg",
       subTitle: "MY HOBBY",
-      title: "Self-Photography",
+      title: "Photography",
       description:
-        "Capturing moments through self-photography allows me to express creativity beyond coding and design. It's a way for me to explore visual storytelling, experiment with lighting, angles, and emotions, and document personal growth through my lens. I enjoy transforming simple moments into meaningful visual expressions that reflect both my artistic vision and individuality. Photography not only enhances my creativity but also inspires me to bring the same attention to detail and aesthetics into my web development work.",
+        "Capturing moments through photography allows me to express creativity beyond coding and design. It's a way for me to explore visual storytelling, experiment with lighting, angles, and emotions, and document personal growth through my lens. I enjoy transforming simple moments into meaningful visual expressions that reflect both my artistic vision and individuality. Photography not only enhances my creativity but also inspires me to bring the same attention to detail and aesthetics into my web development work.",
     },
 
 
@@ -266,7 +267,8 @@ export default function page() {
       <Skills data={about.skills} />
       <Experience experience={about.experience} />
       <Educations data={about.education} />
-      <Certifications data={about.certifications} />
+      {/* <Certifications data={about.certifications} /> */}
+      <Certifications data={about.certifications2} />
       <DesignProcess data={about.designProcess} />
       <Hobby data={about.hobby} />
     </>

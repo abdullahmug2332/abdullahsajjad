@@ -1,18 +1,15 @@
 "use client";
 import React from "react";
-import { PiBuildingsFill } from "react-icons/pi";
 import { GiStarShuriken } from "react-icons/gi";
 import SplitText from "@/components/SplitText";
 import Image from "next/image";
-import { FaLocationArrow } from "react-icons/fa";
-import { motion } from "framer-motion"; 
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Certifications({ data }) {
-
     return (
         <section className="pad">
-            <div className="container flex flex-col  gap-[20px]">
+            <div className="container flex flex-col gap-[20px]">
                 {/* Heading */}
                 <div className="w-full lg:w-[80%]">
                     <div className="flex justify-start items-center gap-[10px] mb-[10px]">
@@ -23,13 +20,12 @@ export default function Certifications({ data }) {
                         />
                     </div>
                     <SplitText text={data.title} className="font-bold heading" />
-                    <p className="para lg:mb-[30px]">
-                        {data.description}
-                    </p>
+                    <p className="para lg:mb-[30px]">{data.description}</p>
                 </div>
 
                 {/* Content */}
                 <div className="flex flex-col lg:flex-row gap-[40px]">
+                    {/* Left Side - Image */}
                     <div className="w-full lg:w-[40%]">
                         <Image
                             src={data.image}
@@ -41,77 +37,85 @@ export default function Certifications({ data }) {
                         />
                     </div>
 
-                    {/* Right Side */}
-                    <motion.div className="w-full lg:w-[60%] bgacc rounded-[30px] p-[25px]" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} transition={{
-                                duration: 1,
-                                ease: "easeIn",
-                            }}>
-                        <p className="subheading color font-[700] flex items-center gap-[10px]">
-                            <span>{data.certificates.icon}</span>
-                            {data.certificates.name}
-                        </p>
+                    {/* Right Side - Certificate Cards */}
+                    <motion.div
+                        className="w-full lg:w-[60%] flex flex-col gap-[10px]"
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                        variants={{
+                            visible: { transition: { staggerChildren: 0.15 } },
+                        }}
+                    >
+                        {data.certificates.map((cert, index) => (
+                            <motion.div
+                                key={index}
+                                variants={{
+                                    hidden: { opacity: 0, x: 30 },
+                                    visible: {
+                                        opacity: 1,
+                                        x: 0,
+                                        transition: { duration: 0.6, ease: "easeOut" },
+                                    },
+                                }}
+                            >
+                                <div className="flex items-center justify-between gap-[15px] bgacc px-[20px] py-[10px] rounded-[5px] duration-300 hover:translate-y-[-5px] cursor-pointer">
+                                    <div className="flex items-center gap-[10px] min-w-0">
+                                        <Image
+                                            src={cert.image}
+                                            alt={cert.organization}
+                                            width={200}
+                                            height={200}
+                                            className="w-[40px] h-[40px] rounded-full object-contain shrink-0"
+                                            unoptimized
+                                        />
+                                        <div className="flex flex-col justify-center items-start min-w-0">
+                                            {cert.credentialLink ? (
+                                                <Link
+                                                    href={cert.credentialLink}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <p className="subheading font-[600] hover:text-[var(--primary)] duration-300">
+                                                        {cert.name}
+                                                    </p>
+                                                </Link>
+                                            ) : (
+                                                <p className="subheading font-[600]">{cert.name}</p>
+                                            )}
 
-                        <p className="para font-[500] mt-[10px]">
-                            {data.certificates.description}
-                        </p>
+                                            {cert.type && (
+                                                <p className="opacity-60 font-[500] text-[11px] md:text-[14px]">
+                                                    {cert.type}
+                                                </p>
+                                            )}
 
-                        <div className="flex justify-between mt-[30px]">
-                            <p className="font-[600] flex items-center gap-[5px]">
-                                <PiBuildingsFill className="color text-[20px]" />
-                                {data.certificates.organization} - {data.certificates.type}
-                            </p>
-                            <p className="opacity-80">{data.certificates.duration}</p>
-                        </div>
+                                            {cert.organizationLink ? (
+                                                <Link
+                                                    href={cert.organizationLink}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <p className="font-[600] opacity-60 text-[12px] md:text-[16px] underline">
+                                                        @{cert.organization}
+                                                    </p>
+                                                </Link>
+                                            ) : (
+                                                <p className="font-[600] opacity-60 text-[12px] md:text-[16px]">
+                                                    @{cert.organization}
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
 
-                        <p className="font-[600] flex items-center gap-[5px]">
-                            <FaLocationArrow className="color text-[16px] mr-[4px]" />
-                            {data.certificates.location}
-                        </p>
-
-                        <p className="font-[600] mt-[30px] mb-[5px]">Key Skills:</p>
-
-                        {/* Key Skills Animation */}
-                        <motion.div
-                            className="flex flex-wrap"
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true, amount: 0.2 }}
-                            variants={{
-                                visible: { transition: { staggerChildren: 0.1 } },
-                            }}
-                        >
-                            {data.certificates.keySkills.map((name, index) => (
-                                <motion.button
-                                    key={index}
-                                    className="bg text-[var(--background)] rounded-[5px] mr-2 mb-2 p-[5px] font-[500]"
-                                    variants={{
-                                        hidden: { opacity: 0, x: 50 },
-                                        visible: {
-                                            opacity: 1,
-                                            x: 0,
-                                            transition: { duration: 0.6, ease: "easeOut" },
-                                        },
-                                    }}
-                                >
-                                    {name}
-                                </motion.button>
-                            ))}
-                        </motion.div>
-
-                        {/* Button Animation (after skills animation) */}
-                        <motion.div
-                            className="flex justify-end mt-[15px]"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, amount: 0.3 }}
-                            transition={{
-                                delay: data.certificates.keySkills.length * 0.1 + 0.3, // waits for all skill buttons
-                                duration: 0.6,
-                                ease: "easeOut",
-                            }}
-                        >
-                            <Link href={"/certificate.jpg"} className="btn">View Certificate</Link>
-                        </motion.div>
+                                    <p className="opacity-60 font-[500] text-[10px] md:text-[16px] shrink-0 text-right">
+                                        {cert.timePeriod.to
+                                            ? `${cert.timePeriod.from} - ${cert.timePeriod.to}`
+                                            : `Issued ${cert.timePeriod.from}`}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        ))}
                     </motion.div>
                 </div>
             </div>
